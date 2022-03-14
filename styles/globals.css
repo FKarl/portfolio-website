@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-bg-500 dark:bg-dark-bg-500
+  }
+  h1 {
+    @apply text-headline-500 dark:text-dark-headline-500
+  }
+  h2 {
+    @apply text-headline-500 dark:text-dark-headline-500
+  }
+  p {
+    @apply text-p-500 dark:text-dark-p-500
+  }
+  button{
+    @apply bg-button-500 dark:bg-dark-bg-500 text-button-text-500 dark:text-dark-button-text-500
+  }
+}
+
 html,
 body {
   padding: 0;
