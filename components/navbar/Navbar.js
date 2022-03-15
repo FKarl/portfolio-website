@@ -82,7 +82,7 @@ export default function Navbar() {
                 </div>
 
                 {/* sections sm */}
-                <NavLinks className="block md:hidden space-x-8 mt-4 whitespace-nowrap"/>
+                <NavLinks className="md:hidden  mt-4 whitespace-nowrap flex flex-wrap justify-between -m-2" childClass="m-2"/>
             </div>
         </header>
     )
