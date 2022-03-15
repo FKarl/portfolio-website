@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
-import userData from "../constants/userData";
-import {BsGithub, BsLinkedin, BsTwitter, BsAlarm, BsSun, BsMoon, BsMoonFill} from "react-icons/bs";
+import userData from "../../constants/userData";
+import {BsGithub, BsLinkedin, BsTwitter, BsSun, BsMoonFill} from "react-icons/bs";
 import {useTheme} from "next-themes";
 import NavLinks from "./NavLinks";
 
@@ -21,17 +21,18 @@ export default function Navbar() {
 
 
     return (
-        <header className="md:sticky top-0 z-10">
+        <header
+            className="md:sticky top-0 z-10 bg-gradient-to-b from-bg-500 via-bg-500 to-bg-500/50 dark:from-dark-bg-500 dark:via-dark-bg-500 dark:to-dark-bg-500/50">
             <div className="max-w-6xl mx-auto px-4 py-10">
                 <div className="flex justify-between items-center space-x-3">
                     {/* Name / Home */}
                     <div className="flex flex-col">
                         <Link href="/">
                             <a>
-                                <h1 className="font-semibold text-xl dark:text-gray-100 whitespace-nowrap">
+                                <h1 className="font-semibold text-xl whitespace-nowrap">
                                     {userData.name}
                                 </h1>
-                                <p className="text-base font-light text-gray-500 dark:text-gray-300">
+                                <p className="text-base font-light">
                                     {userData.designation}
                                 </p>
                             </a>
@@ -65,7 +66,7 @@ export default function Navbar() {
                             aria-label="Toggle Dark Mode"
                             type="button"
                             onClick={toggleTheme}
-                            className="w-10 h-10 p-3"
+                            className="w-10 h-10 p-3 dark:bg-transparent"
                         >
                             {mounted &&
                                 (

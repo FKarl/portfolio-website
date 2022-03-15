@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import meta from "../constants/meta";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
+import Hero from "../components/hero/Hero";
 
 export default function Home() {
     return (
@@ -13,15 +14,7 @@ export default function Home() {
             </Head>
             <Navbar/>
             <main>
-                <div className="h-96">
-                    test
-                </div>
-                <div className="h-96">
-                    test dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-                </div>
-                <div className="h-96">
-                    test
-                </div>
+                <Hero/>
             </main>
             <Footer/>
         </div>

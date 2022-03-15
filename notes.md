@@ -26,3 +26,5 @@
 
 
 * https://react-icons.github.io/react-icons/icons?name=ai
+* https://www.happyhues.co/palettes/12
+* https://www.happyhues.co/palettes/2

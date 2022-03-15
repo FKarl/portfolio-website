@@ -16,7 +16,7 @@
     @apply text-p-500 dark:text-dark-p-500
   }
   button{
-    @apply bg-button-500 dark:bg-dark-bg-500 text-button-text-500 dark:text-dark-button-text-500
+    @apply bg-highlight-500 dark:bg-dark-highlight-500 text-button-text-500 dark:text-dark-button-text-500
   }
 }
 
