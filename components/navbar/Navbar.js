@@ -47,18 +47,21 @@ export default function Navbar() {
                         <a
                             href={userData.social.github}
                             className="text-headline-500 dark:text-dark-headline-500"
+                            target="_blank"
                         >
                             <BsGithub/>
                         </a>
                         <a
                             href={userData.social.linkedin}
                             className="text-headline-500 dark:text-dark-headline-500"
+                            target="_blank"
                         >
                             <BsLinkedin/>
                         </a>
                         <a
                             href={userData.social.twitter}
                             className="text-headline-500 dark:text-dark-headline-500"
+                            target="_blank"
                         >
                             <BsTwitter/>
                         </a>
