@@ -40,25 +40,25 @@ export default function Navbar() {
                     </div>
 
                     {/* sections md */}
-                    <NavLinks className="hidden md:block space-x-8 whitespace-nowrap"/>
+                    <NavLinks className="hidden md:block space-x-8 whitespace-nowrap text-headline-500 dark:text-dark-headline-500"/>
 
                     {/* Social media and dark mode */}
                     <div className="flex flex-row items-center space-x-4">
                         <a
                             href={userData.social.github}
-                            className="text-gray-600 dark:text-gray-200"
+                            className="text-headline-500 dark:text-dark-headline-500"
                         >
                             <BsGithub/>
                         </a>
                         <a
                             href={userData.social.linkedin}
-                            className="text-gray-600 dark:text-gray-200"
+                            className="text-headline-500 dark:text-dark-headline-500"
                         >
                             <BsLinkedin/>
                         </a>
                         <a
                             href={userData.social.twitter}
-                            className="text-gray-600 dark:text-gray-200"
+                            className="text-headline-500 dark:text-dark-headline-500"
                         >
                             <BsTwitter/>
                         </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
                 </div>
 
                 {/* sections sm */}
-                <NavLinks className="md:hidden  mt-4 whitespace-nowrap flex flex-wrap justify-between -m-2" childClass="m-2"/>
+                <NavLinks className="md:hidden  mt-4 whitespace-nowrap flex flex-wrap justify-between -m-2 text-headline-500 dark:text-dark-headline-500" childClass="m-2"/>
             </div>
         </header>
     )
