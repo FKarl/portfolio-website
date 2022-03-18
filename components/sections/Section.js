@@ -8,7 +8,7 @@ export default function Section({children, side, title, id}) {
     if (!((side === "l") || (side === "r"))) side = "l";
 
     const {ref, inView} = useInView({
-        threshold: 0.75,
+        rootMargin: "-25%"
     });
     const animation = useAnimation();
 
