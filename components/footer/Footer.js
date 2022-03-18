@@ -13,17 +13,14 @@ export default function Footer() {
                 {/*social media links*/}
                 <div className="flex flex-row items-center space-x-4 text-p-500 dark:text-dark-p-500">
                     <a href={userData.social.github}
-                       target="_blank"
                     >
                         <BsGithub/>
                     </a>
                     <a href={userData.social.linkedin}
-                       target="_blank"
                     >
                         <BsLinkedin/>
                     </a>
                     <a href={userData.social.twitter}
-                       target="_blank"
                     >
                         <BsTwitter/>
                     </a>

@@ -26,7 +26,7 @@ export default function Section({children, side, title, id}) {
                 }
             )
         }
-    }, [inView]);
+    }, [inView, animation]);
 
     return (
         <div ref={ref} id={id} className="md:scroll-mt-32 lg:scroll-mt-48">
