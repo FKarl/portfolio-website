@@ -2,6 +2,7 @@ import {CgArrowLongRightC, CgArrowLongDownC} from "react-icons/cg"
 import {motion, useAnimation} from "framer-motion"
 import {useInView} from "react-intersection-observer";
 import {useEffect} from "react";
+import React from "react";
 
 export default function Section({children, side, title, id}) {
     if (!((side === "l") || (side === "r"))) side = "l";
@@ -19,7 +20,7 @@ export default function Section({children, side, title, id}) {
                     transition: {
                         type: "spring",
                         duration: 1.5,
-                        delay:0,
+                        delay: 0,
                         bounce: 0.3
                     }
                 }

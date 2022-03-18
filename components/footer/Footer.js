@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className="max-w-6xl mx-auto px-4 py-10">
             <div className="h-0.5 w-full bg-p-500 dark:bg-dark-p-500"/>
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between mt-5 md:items-center">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 justify-between mt-5 sm:items-center">
                 <div>
                     <p>&copy; {userData.name}. All Rights Reserved.</p>
                 </div>

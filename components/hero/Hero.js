@@ -63,7 +63,7 @@ export default function Hero() {
                                 </a>
                             </div>
                             <div className="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="#"
+                                <a href="#contact"
                                    className="w-full flex items-center justify-center px-8 md:px-10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-secondary-500 dark:bg-dark-secondary-500 hover:bg-secondary-800 dark:bg-dark-secondary-800">
                                     Contact me </a>
                             </div>
@@ -73,7 +73,7 @@ export default function Hero() {
             </div>
             <div className="hidden lg:block flex-grow mx-auto">
                 <div className="mt-24">
-                        <a href="/#skills">
+                        <a href="/#about">
                             <HiOutlineChevronDoubleDown className="text-2xl text-headline-500 dark:text-dark-headline-500 animate-bounce hover:text-highlight-500 dark:hover:text-dark-highlight-500"/>
                         </a>
                 </div>

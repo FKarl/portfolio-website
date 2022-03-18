@@ -4,10 +4,10 @@ export default function NavLinks({className, childClass}) {
     // TODO sections
     return (
         <nav className={className}>
+            <a className={childClass} href="#about">About Me</a>
+            <a className={childClass} href="#resume">Resume</a>
             <a className={childClass} href="#skills">My Skills</a>
-            <a className={childClass}>Placeholder 2</a>
-            <a className={childClass}>Placeholder 3</a>
-            <a className={childClass}>Placeholder 4</a>
+            <a className={childClass} href="#contact">Contact me</a>
         </nav>
     )
 }
