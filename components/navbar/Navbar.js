@@ -33,7 +33,7 @@ export default function Navbar() {
                                     {userData.name}
                                 </h1>
                                 <p className="text-base font-light">
-                                    {userData.designation}
+                                    {userData.mainDesignation}
                                 </p>
                             </a>
                         </Link>

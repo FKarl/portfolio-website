@@ -203,6 +203,10 @@ module.exports = {
                     "800": "#00032f",
                     "900": "#000025"
                 }
+            },
+            backgroundImage: {
+                'hero-pattern': "url('/assets/wave2.svg')",
+                'section-pattern': "url('/assets/wave3.svg')",
             }
         },
     },

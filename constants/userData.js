@@ -2,7 +2,10 @@ const userData = {
     // basic data
     name: "Fabian Karl",
     email: "fabian.karl@uni-ulm.de",
-    designation: "Data Scientist",
+    mainDesignation: "Data Scientist",
+    furtherDesignations: ["Student"],
+    birthDate: new Date(2000,5,3,0,0,0,0),
+    programmingStart: new Date(2016,8,1,0,0,0,0),
 
     // social media
     social: {
