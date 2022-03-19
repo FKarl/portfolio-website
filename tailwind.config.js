@@ -205,11 +205,10 @@ module.exports = {
                 }
             },
             backgroundImage: {
-                'hero-pattern': "url('/assets/wave2.svg')",
-                'section-pattern': "url('/assets/wave3.svg')",
-                'section-spacer': "url('/assets/wave-section.svg')",
-                'hero-light': "url('/assets/wave-light.svg')",
-                'hero-spacer-light': "url('/assets/wave-spacer-light.svg')",
+                'hero-pattern-dark': "url('/assets/hero/pattern-dark.svg')",
+                'hero-spacer-dark': "url('/assets/hero/spacer-dark.svg')",
+                'hero-pattern': "url('/assets/hero/pattern.svg')",
+                'hero-spacer': "url('/assets/hero/spacer.svg')",
             }
         },
     },
