@@ -62,11 +62,9 @@ export default function Hero() {
                                     incididunt ut
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit
                                     in
-                                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat
-                                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                 </p>
                                 {/* Buttons TODO file loader for cv*/}
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -96,7 +94,8 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="bg-hero-spacer dark:bg-hero-spacer-dark bg-no-repeat bg-cover h-24 sm:h-32 md:h-52 lg:h-80"/>
+            <div
+                className="bg-hero-spacer dark:bg-hero-spacer-dark bg-no-repeat bg-cover h-24 sm:h-32 md:h-52 lg:h-80"/>
         </div>
     );
 }

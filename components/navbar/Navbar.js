@@ -23,7 +23,7 @@ export default function Navbar() {
     return (
         <header
             className="md:sticky top-0 z-10 bg-gradient-to-b from-bg-500 via-bg-500 to-bg-500/50 dark:from-dark-bg-500 dark:via-dark-bg-500 dark:to-dark-bg-500/50">
-            <div className="max-w-6xl mx-auto px-4 py-10">
+            <div className="max-w-6xl mx-auto px-4 py-3 lg:py-4">
                 <div className="flex justify-between items-center space-x-3">
                     {/* Name / Home */}
                     <div className="flex flex-col">
