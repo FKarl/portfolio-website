@@ -36,7 +36,7 @@ export default function Hero() {
     return (
         <div>
             <div className="bg-hero-pattern dark:bg-hero-pattern-dark bg-no-repeat bg-cover">
-                <div className="flex flex-col lg:[height:86vh]">
+                <div className="flex flex-col lg:[height:89vh]">
                     <div
                         className="pb-8 pt-8 md:pt-0 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
                         {/* TODO fix border "hole"*/}
@@ -84,8 +84,8 @@ export default function Hero() {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:block flex-grow mx-auto">
-                        <div className="mt-20">
+                    <div className="hidden lg:block flex-grow mx-auto ">
+                        <div className="mt-20 xl:mt-32">
                             <a href="#about">
                                 <HiOutlineChevronDoubleDown
                                     className="text-2xl text-headline-500 dark:text-dark-headline-500 animate-bounce hover:text-highlight-500 dark:hover:text-dark-highlight-500"/>
