@@ -38,11 +38,11 @@ export default function Hero() {
             <div className="bg-hero-pattern dark:bg-hero-pattern-dark bg-no-repeat bg-cover">
                 <div className="flex flex-col lg:[height:86vh]">
                     <div
-                        className="pb-8 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
+                        className="pb-8 pt-8 md:pt-0 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
                         {/* TODO fix border "hole"*/}
                         <div
                             className="relative h-80 w-80 border-2 border-highlight-500 dark:border-dark-highlight-500 rounded-3xl">
-                            <Image src="/assets/avatar.jpg"
+                            <Image src="/assets/hero/avatar.jpg"
                                    alt="me"
                                    layout="fill"
                                    objectFit="cover"

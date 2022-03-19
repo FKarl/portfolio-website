@@ -209,6 +209,8 @@ module.exports = {
                 'hero-spacer-dark': "url('/assets/hero/spacer-dark.svg')",
                 'hero-pattern': "url('/assets/hero/pattern.svg')",
                 'hero-spacer': "url('/assets/hero/spacer.svg')",
+                '404': "url('/assets/404/blob-dark.svg')",
+                '404-v': "url('/assets/404/blob-dark-vertical.svg')",
             }
         },
     },
