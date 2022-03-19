@@ -207,6 +207,9 @@ module.exports = {
             backgroundImage: {
                 'hero-pattern': "url('/assets/wave2.svg')",
                 'section-pattern': "url('/assets/wave3.svg')",
+                'section-spacer': "url('/assets/wave-section.svg')",
+                'hero-light': "url('/assets/wave-light.svg')",
+                'hero-spacer-light': "url('/assets/wave-spacer-light.svg')",
             }
         },
     },

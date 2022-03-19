@@ -35,7 +35,7 @@ export default function Hero() {
 
     return (
         <div>
-            <div className="bg-hero-pattern bg-no-repeat bg-cover">
+            <div className="bg-hero-light dark:bg-hero-pattern bg-no-repeat bg-cover">
                 <div className="flex flex-col lg:[height:86vh]">
                     <div
                         className="pb-8 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
@@ -96,7 +96,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="bg-section-pattern bg-no-repeat bg-cover h-24 sm:h-32 md:h-52 lg:h-80"/>
+            <div className="bg-hero-spacer-light dark:bg-section-pattern bg-no-repeat bg-cover h-24 sm:h-32 md:h-52 lg:h-80"/>
         </div>
     );
 }
