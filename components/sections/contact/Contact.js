@@ -95,25 +95,25 @@ export default function Contact({side}) {
                 <div className="flex-grow">
                     <form className="flex flex-col" onSubmit={submitHandler}>
                         <label htmlFor="name" className="mb-1">
-                            Your Name
+                            Your Name *
                         </label>
                         <input type="text"
                                name="name"
-                               className="form-input rounded-2xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500"/>
+                               className="form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500"/>
 
                         <label htmlFor="email" className="mt-2 mb-1">
-                            E-Mail
+                            E-Mail *
                         </label>
                         <input type="email"
                                name="email"
-                               className="w-full form-input rounded-2xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500"/>
+                               className="w-full form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500"/>
 
                         <label htmlFor="message" className="mt-2 mb-1">
-                            Message
+                            Message *
                         </label>
                         <textarea rows="5"
                                   name="message"
-                                  className="form-input rounded-2xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500"/>
+                                  className="form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:outline-none focus:border-highlight-500 focus:dark:border-dark-highlight-500 focus:ring-0"/>
 
                         <input type="submit" value="Send"
                                className="w-1/2  max-w-xs mt-4 py-2 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 hover:dark:bg-dark-highlight-800"/>
