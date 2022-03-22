@@ -73,19 +73,19 @@ export default function Contact({side}) {
                         <div
                             className="flex flex-row items-center space-x-5 md:space-x-10 rounded-md border border-bg-500 dark:border-dark-bg-500 hover:border-highlight-500 hover:dark:border-dark-highlight-500 p-2"
                             onClick={() => copyToClipboard(userData.email)}>
-                            <div className="text-headline-500-500 dark:text-dark-headline-500 text-2xl ">
+                            <div className="text-headline-500 dark:text-dark-headline-500 text-2xl ">
                                 <MdMail/>
                             </div>
-                            <p className="text-headline-500-500 dark:text-dark-headline-500 sm:text-lg whitespace-nowrap font-semibold">
+                            <p className="text-headline-500 dark:text-dark-headline-500 sm:text-lg whitespace-nowrap font-semibold">
                                 {userData.email}
                             </p>
                         </div>
                         <div
                             className="flex flex-row items-center space-x-5 md:space-x-10 rounded-md border border-bg-500 dark:border-dark-bg-500 hover:border-highlight-500 hover:dark:border-dark-highlight-500 p-2">
-                            <div className="text-headline-500-500 dark:text-dark-headline-500 text-2xl">
+                            <div className="text-headline-500 dark:text-dark-headline-500 text-2xl">
                                 <MdLocationOn/>
                             </div>
-                            <p className="text-headline-500-500 dark:text-dark-headline-500 sm:text-lg font-semibold">
+                            <p className="text-headline-500 dark:text-dark-headline-500 sm:text-lg font-semibold">
                                 {userData.location}
                             </p>
                         </div>
