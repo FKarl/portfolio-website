@@ -29,7 +29,7 @@ export default function Section({children, side, title, id, className}) {
     }, [inView, animation]);
 
     return (
-        <div className={className}>
+        <section className={className}>
             <div ref={ref} id={id} className="md:scroll-mt-32 lg:scroll-mt-48 overflow-hidden">
                 <motion.div
                     initial={{
@@ -51,11 +51,11 @@ export default function Section({children, side, title, id, className}) {
                     </div>
 
                     {/*content*/}
-                    <div className="flex-grow">
+                    <div className="flex-grow w-full">
                         {children}
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     )
 }

@@ -8,6 +8,8 @@ import About from "../components/sections/about/About";
 import Resume from "../components/sections/resume/Resume";
 import Skills from "../components/sections/skills/Skills";
 import Contact from "../components/sections/contact/Contact";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
     return (
@@ -19,6 +21,7 @@ export default function Home() {
                 <meta property="og:type" content={meta.type}/>
             </Head>
             <Navbar/>
+            <ToastContainer/>
             <main>
                 <Hero/>
                 <About side="l"/>

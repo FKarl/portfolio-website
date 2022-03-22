@@ -6,6 +6,7 @@ const userData = {
     furtherDesignations: ["Student"],
     birthDate: new Date(2000,5,3,0,0,0,0),
     programmingStart: new Date(2016,8,1,0,0,0,0),
+    location: "Ulm, Germany",
 
     // social media
     social: {
