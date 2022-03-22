@@ -38,7 +38,7 @@ export default function Hero() {
             <div className="bg-hero-pattern dark:bg-hero-pattern-dark bg-no-repeat bg-cover">
                 <div className="flex flex-col lg:[height:89vh]">
                     <div
-                        className="pb-8 pt-8 md:pt-0 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
+                        className="pb-8 pt-8 md:pt-0 lg:mt-16 xl:mt-20 w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
                         {/* TODO fix border "hole"*/}
                         <div
                             className="relative h-80 w-80 border-2 border-highlight-500 dark:border-dark-highlight-500 rounded-3xl">
@@ -48,7 +48,7 @@ export default function Hero() {
                                    objectFit="cover"
                                    className="rounded-3xl"/>
                         </div>
-                        <div className="mt-10 mx-auto max-w-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20  xl:mt-28">
+                        <div className="mt-10 mx-auto max-w-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-18  xl:mt-28">
                             <div className="text-left">
                                 <h1 className="text-4xl tracking-tight font-bold sm:text-5xl md:text-6xl sm:text-center lg:text-left">
                                     <span className="block">Hi I am </span>
@@ -58,13 +58,8 @@ export default function Hero() {
                                 <Typical steps={designationPrint()} loop={Infinity}
                                          className="mt-1 text-base md:mt-2 sm:text-lg sm:text-center lg:text-left"/>
                                 <p className="mt-3 md:mt-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit
-                                    in
+                                    Feel free to look around this website for a quick outline of who I am.
+                                    If you require any additional information, please contact me or take a look at my CV.
                                 </p>
                                 {/* Buttons TODO file loader for cv*/}
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
