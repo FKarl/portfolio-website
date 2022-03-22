@@ -60,7 +60,7 @@ export default function Contact({side}) {
         <Section side={side} id="contact" title="Contact">
             <div className="flex flex-col sm:flex-row sm:space-x-4 md:space-x-8 space-y-4 sm:space-y-0 mx-auto">
                 {/*Contact information*/}
-                <div className="space-y-7 sm:space-y-14 max-w-min md:max-w-md">
+                <div className="space-y-7 sm:space-y-14 sm:max-w-min md:max-w-md">
                     <div className="space-y-3">
                         <h1 className="text-2xl tracking-tight font-bold  sm:text-3xl md:text-4xl">
                             Get in touch.
