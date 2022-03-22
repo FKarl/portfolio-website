@@ -1,5 +1,5 @@
 import Section from "../Section";
-import {toast} from 'react-toastify';
+import {toast} from "react-toastify";
 import {MdLocationOn, MdMail} from "react-icons/md";
 import userData from "../../../constants/userData";
 
@@ -21,7 +21,7 @@ export default function Contact({side}) {
             fetch("/api/contact", {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(
                     {
@@ -66,7 +66,7 @@ export default function Contact({side}) {
                             Get in touch.
                         </h1>
                         <p className="">
-                            Fill out the form and I'll get back to you as soon as possible.
+                            Fill out the form and I&apos;ll get back to you as soon as possible.
                         </p>
                     </div>
                     <div className="space-y-3 sm:space-y-7">
