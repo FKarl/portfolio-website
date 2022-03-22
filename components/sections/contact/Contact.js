@@ -99,14 +99,14 @@ export default function Contact({side}) {
                         </label>
                         <input type="text"
                                name="name"
-                               className="form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500"/>
+                               className="form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500 focus:ring-0"/>
 
                         <label htmlFor="email" className="mt-2 mb-1">
                             E-Mail *
                         </label>
                         <input type="email"
                                name="email"
-                               className="w-full form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500"/>
+                               className="w-full form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:border-highlight-500 focus:dark:border-dark-highlight-500 focus:ring-0"/>
 
                         <label htmlFor="message" className="mt-2 mb-1">
                             Message *
