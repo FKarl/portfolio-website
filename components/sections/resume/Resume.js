@@ -19,7 +19,7 @@ export default function Resume({side}) {
                         </div>
                         <div className="space-y-12 lg:space-y-8">
                             {resume.map((value, id) => (
-                                <Card id={id} title={value.title} location={value.location} date={value.date}/>
+                                <Card id={id} title={value.title} location={value.location} date={value.date} key={id}/>
                             ))}
                         </div>
                     </div>
