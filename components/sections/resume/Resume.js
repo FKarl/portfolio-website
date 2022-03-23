@@ -12,7 +12,7 @@ export default function Resume({side}) {
                     <div className="relative">
                         {/* line */}
                         <div
-                            className="absolute hidden w-px h-full bg-highlight-800 dark:bg-dark-highlight-800 md:block left-1/2"/>
+                            className="absolute hidden md:block w-px h-full bg-highlight-800 dark:bg-dark-highlight-800 left-1/2"/>
                         {/* ping point */}
                         <div className="hidden md:block rounded-full w-4 h-4 bg-highlight-800 dark:bg-dark-highlight-800 mx-auto mb-14">
                             <div className="rounded-full w-4 h-4 bg-highlight-800 dark:bg-dark-highlight-800 animate-ping"/>

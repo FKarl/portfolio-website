@@ -25,8 +25,8 @@ export default function Home() {
             <main>
                 <Hero/>
                 <About side="l"/>
-                <Resume side="r"/>
-                <Skills side="l"/>
+                <Skills side="r"/>
+                <Resume side="l"/>
                 <Contact side="r"/>
             </main>
             <Footer/>
