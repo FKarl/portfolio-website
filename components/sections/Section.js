@@ -36,7 +36,7 @@ export default function Section({children, side, title, id, className}) {
                         x: side === "l" ? "-100vw" : "100vw",
                     }}
                     animate={animation}
-                    className={"pl-4 pr-4 md:pl-0 md:pr-0 mt-3 md:mt-5 pb-8 w-full lg:max-w-7xl mx-auto flex flex-col items-start space-y-6 md:space-y-0 md:space-x-6 " + (side === "l" ? "md:flex-row md:[padding-right:4.25rem]" : "md:flex-row-reverse space-x-reverse md:[padding-left:4.25rem]")}
+                    className={`pl-4 pr-4 md:pl-0 md:pr-0 mt-3 md:mt-5 pb-8 w-full lg:max-w-7xl mx-auto flex flex-col items-start space-y-6 md:space-y-0 md:space-x-6 ${side === "l" ? "md:flex-row md:[padding-right:4.25rem]" : "md:flex-row-reverse space-x-reverse md:[padding-left:4.25rem]"}`}
                 >
 
                     {/*marker*/}

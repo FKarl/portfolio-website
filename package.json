@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "ajax": "^0.0.4",
+    "devicon": "^2.15.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
