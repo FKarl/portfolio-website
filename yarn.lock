@@ -1880,6 +1880,13 @@ react-reveal@^1.2.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-rough-notation@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-rough-notation/-/react-rough-notation-1.0.2.tgz#c558c710ffcc09c01d4ec9d35e68883f8908304d"
+  integrity sha512-nS3u90cZMQrOSzUbut28nrVgc1ixMaclDloqGi1Sw5BiY3DQNQPL8cVbIVoKUxwSiWugVM5GPf9ubL/h/avoKw==
+  dependencies:
+    rough-notation "^0.4.0"
+
 react-toastify@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.2.0.tgz#ef7d56bdfdc6272ca6b228368ab564721c3a3244"
@@ -1960,6 +1967,11 @@ rimraf@^3.0.2:
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
+
+rough-notation@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/rough-notation/-/rough-notation-0.4.0.tgz#6f97324cb50fc91ec8064219253aa2528a69210f"
+  integrity sha512-hDgn9qMIxWnfY+WWjt30aLMtDHR13H8r/NI3EQNdJiEFAzpklH5nKg4eH/thpxCWTYzyg8ueMsKIfz9MzOBQ4Q==
 
 run-parallel@^1.1.9:
   version "1.2.0"

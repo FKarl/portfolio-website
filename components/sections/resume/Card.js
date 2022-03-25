@@ -10,8 +10,8 @@ export default function Card({id, location, title, date}) {
                         <div
                             className="p-4 bg-secondary-300 dark:bg-dark-secondary-300 rounded text-button-text-500 dark:text-button-text-500">
                             <div className="flex flex-col space-y-1">
-                                <span className="font-light">{location}</span>
-                                <span className="font-semibold">{title}</span>
+                                <span className="font-normal">{location}</span>
+                                <span className="font-bold">{title}</span>
                             </div>
                         </div>
                     </div>
