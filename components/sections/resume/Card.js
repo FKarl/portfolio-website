@@ -8,7 +8,7 @@ export default function Card({id, location, title, date}) {
                 <div className={"flex items-center w-full mx-auto " + (left ? "justify-start" : "justify-end")}>
                     <div className={"w-full md:w-1/2 " + (left ? "md:pr-20" : "md:pl-20")}>
                         <div
-                            className="p-4 bg-secondary-300 dark:bg-dark-secondary-300 rounded text-button-text-500 dark:text-button-text-500">
+                            className="p-4 bg-secondary-50 dark:bg-dark-secondary-50 rounded text-button-text-500 dark:text-button-text-500">
                             <div className="flex flex-col space-y-1">
                                 <span className="font-normal">{location}</span>
                                 <span className="font-bold">{title}</span>
