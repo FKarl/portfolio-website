@@ -31,10 +31,10 @@ export default function About({side}) {
                         Since then, my focus has shifted away from traditional programming and software engineering and toward&nbsp;
                         <RoughNotation type="circle" multiline={true} className="text-highlight-500 dark:text-dark-highlight-500">data science</RoughNotation>
                         &nbsp;and machine learning.
-                        I find it very exciting that you don't look at a program as a simple process, but as a problem for which you develop models to solve.
-                        This is also why I've chosen to pursue a career in this field.
+                        I find it very exciting that you don&apos;t look at a program as a simple process, but as a problem for which you develop models to solve.
+                        This is also why I&apos;ve chosen to pursue a career in this field.
 
-                        Over the years, I've developed a variety of skills, which are detailed in the following section.
+                        Over the years, I&apos;ve developed a variety of skills, which are detailed in the following section.
                     </RoughNotationGroup>
                 </p>
             </Section>
