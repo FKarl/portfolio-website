@@ -9,16 +9,25 @@ import Resume from "../components/sections/resume/Resume";
 import Skills from "../components/sections/skills/Skills";
 import Contact from "../components/sections/contact/Contact";
 import {ToastContainer} from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Head>
                 <title>{meta.title}</title>
                 <link rel="icon" sizes="32x32" href="/favicon.ico"/>
                 <meta name="description" content={meta.description}/>
+                <meta name="keyword" content={meta.keyword}/>
+                <meta charSet="utf-8"/>
                 <meta property="og:type" content={meta.type}/>
+                <meta property="og:description" content={meta.description}/>
+                <meta property="og:url" content={meta.url}/>
+                <meta property="og:image" content={meta.image}/>
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:title" content={meta.title}/>
+                <meta name="twitter:description" content={meta.description}/>
+                <meta name="twitter:image" content={meta.image}/>
             </Head>
             <Navbar/>
             <ToastContainer/>
@@ -30,6 +39,6 @@ export default function Home() {
                 <Contact side="r"/>
             </main>
             <Footer/>
-        </div>
+        </>
     )
 }
