@@ -1,6 +1,6 @@
 * [ ] check import constants
 * [ ] upload cv
-* [ ] label alt links (social)
+* [x] label alt links (social)
 * [ ] Better email template
-* [ ] Scroll offset at chrome bug
+* [x] Scroll offset at chrome bug
 * [ ] delete unused spacer

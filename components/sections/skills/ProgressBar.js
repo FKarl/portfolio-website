@@ -17,7 +17,9 @@ export default function ProgressBar({progress, start, icon, title}) {
                     <div className="-mb-1 w-8">
                         {icon}
                     </div>
-                    <div>{title}</div>
+                    <h2 className="font-semibold">
+                        {title}
+                    </h2>
                 </div>
                 <div>
                     {progress} / 10
