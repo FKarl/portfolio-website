@@ -30,7 +30,7 @@ export default function Section({children, side, title, id, className}) {
 
     return (
         <section className={className}>
-            <div ref={ref} id={id} className="md:scroll-mt-32 lg:scroll-mt-48 overflow-hidden">
+            <div ref={ref} id={id} className="md:-mt-32 md:pt-32 lg:-mt-48 lg:pt-48 overflow-hidden">
                 <motion.div
                     initial={{
                         x: side === "l" ? "-100vw" : "100vw",
