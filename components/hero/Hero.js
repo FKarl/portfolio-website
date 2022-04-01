@@ -45,9 +45,10 @@ export default function Hero() {
                         <div
                             className="relative h-80 w-80 border-2 border-highlight-500 dark:border-dark-highlight-500 rounded-3xl">
                             <Image src="/assets/hero/avatar.jpg"
-                                   alt="me"
+                                   alt="A picture of Fabian Karl"
                                    layout="fill"
                                    objectFit="cover"
+                                   sizes="80vw"
                                    className="rounded-3xl"/>
                         </div>
                         <div className="mt-10 mx-auto max-w-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-18  xl:mt-28">
@@ -61,7 +62,8 @@ export default function Hero() {
                                          className="mt-1 text-base md:mt-2 sm:text-lg sm:text-center lg:text-left"/>
                                 <p className="mt-3 md:mt-5">
                                     Feel free to look around this website for a quick outline of who I am.
-                                    If you require any additional information, please contact me or take a look at my CV.
+                                    If you require any additional information, please contact me or take a look at my
+                                    CV.
                                 </p>
                                 {/* Buttons TODO file loader for cv*/}
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -83,7 +85,7 @@ export default function Hero() {
                     </div>
                     <div className="hidden lg:block flex-grow mx-auto ">
                         <div className="mt-20 xl:mt-32">
-                            <a href="#about">
+                            <a href="#about" aria-label="scroll down">
                                 <HiOutlineChevronDoubleDown
                                     className="text-2xl text-headline-500 dark:text-dark-headline-500 animate-bounce hover:text-highlight-500 dark:hover:text-dark-highlight-500"/>
                             </a>
