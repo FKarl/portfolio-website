@@ -4,6 +4,6 @@ const meta = {
     type: "website",
     keyword: "Portfolio, Data Science, Developer, Fabian Karl, CV",
     url: "https://www.fkarl.de",
-    image: "https://www.fkarl.de/_next/image?url=%2Fassets%2Fhero%2Favatar.jpg&w=1080&q=100"
+    image: "https://www.fkarl.de/assets/hero/avatar.jpg"
 };
 export default meta;
