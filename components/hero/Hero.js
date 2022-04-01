@@ -68,8 +68,9 @@ export default function Hero() {
                                 {/* Buttons TODO file loader for cv*/}
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
-                                        <Link href="resources/cv.pdf">
-                                            <a className="w-full flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 dark:hover:bg-dark-highlight-800">
+                                        <Link href="/resources/cv.pdf">
+                                            <a download="CV_Fabian_Karl.pdf" target="_blank"
+                                               className="w-full flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 dark:hover:bg-dark-highlight-800">
                                                 Download CV
                                             </a>
                                         </Link>
