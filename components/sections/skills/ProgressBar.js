@@ -8,7 +8,7 @@ export default function ProgressBar({progress, start, icon, title}) {
         if (start && value === 0) {
             setValue(progress)
         }
-    }, [start])
+    }, [start, progress, value])
 
     return (
         <div className="space-y-3">
