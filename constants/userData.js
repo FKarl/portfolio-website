@@ -13,7 +13,7 @@ const userData = {
         githubUsername: "FKarl",
         github: "https://github.com/FKarl",
         twitter: "https://twitter.com/FabiKarl",
-        linkedin: "https://www.linkedin.com/in/fabian-karl-3511b2173/"
+        linkedin: "https://www.linkedin.com/in/FKarl"
     }
 
 };
