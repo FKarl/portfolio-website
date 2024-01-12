@@ -31,7 +31,7 @@ export default function Home() {
             </Head>
             <Navbar/>
             <ToastContainer/>
-            <main>
+            <main className="main-content">
                 <Hero/>
                 <About side="l"/>
                 <Skills side="r"/>
