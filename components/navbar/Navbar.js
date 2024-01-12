@@ -30,10 +30,10 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto px-4 py-3 lg:py-4 flex justify-between items-center space-x-3">
                 <div className="flex flex-col">
                     <Link href="/">
-                        <a>
-                            <h1 className="font-semibold text-xl whitespace-nowrap">{userData.name}</h1>
-                            <p className="text-base font-light">{userData.mainDesignation}</p>
-                        </a>
+
+                        <h1 className="font-semibold text-xl whitespace-nowrap">{userData.name}</h1>
+                        <p className="text-base font-light">{userData.mainDesignation}</p>
+
                     </Link>
                 </div>
 

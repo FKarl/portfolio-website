@@ -7,12 +7,14 @@ export default function PageNotFound() {
                 <h1 className="whitespace-nowrap text-xl tracking-tight font-bold sm:text-4xl md:text-5xl text-dark-headline-500">
                     404 - This page could not be found
                 </h1>
-                <Link href="/">
-                    <a className="shadow w-full sm:w-fit flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base rounded-md text-button-text-500 bg-dark-highlight-500 hover:bg-dark-highlight-800">
+                <Link
+                    href="/"
+                    className="shadow w-full sm:w-fit flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base rounded-md text-button-text-500 bg-dark-highlight-500 hover:bg-dark-highlight-800">
+                    
                         Go back home
-                    </a>
+                    
                 </Link>
             </div>
         </div>
-    )
+    );
 }
