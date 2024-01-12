@@ -215,6 +215,21 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms')
+        require('@tailwindcss/forms'),
+        module.exports = {
+            theme: {
+                extend: {
+                    flavors: {
+                        light: "Latte",
+                        dark: "Macchiato",
+                    },
+                },
+            },
+            variants: {},
+            plugins: [
+                require('@tailwindcss/forms'),
+                require("@catppuccin/tailwindcss"),
+            ],
+        }
     ],
 }
