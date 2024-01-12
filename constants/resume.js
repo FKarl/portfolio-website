@@ -1,13 +1,18 @@
 const resume = [
     {
-        date: "Ongoing",
+        date: "Since 2022",
         location: "University of Ulm",
-        title: "Bachelor of Science in Computer Science"
+        title: "Master of Science in Computer Science"
     },
     {
-        date: "2021 - 2022",
+        date: "Since 2022",
         location: "University of Ulm",
-        title: "Tutor for modules in Practical Computer Science"
+        title: "Student Research Assistant in Data Science"
+    },
+    {
+        date: "2019 - 2022",
+        location: "University of Ulm",
+        title: "Bachelor of Science in Computer Science (1.3)"
     },
     {
         date: "2016 - 2019",

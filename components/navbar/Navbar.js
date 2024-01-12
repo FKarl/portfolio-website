@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { BsGithub, BsLinkedin, BsTwitter, BsSun, BsMoonFill } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitterX , BsSun, BsMoonFill } from "react-icons/bs";
 import { useTheme } from "next-themes";
 import NavLinks from "./NavLinks";
 
@@ -48,7 +48,7 @@ export default function Navbar() {
                         <BsLinkedin />
                     </a>
                     <a href={userData.social.twitter} className="text-headline-500 dark:text-dark-headline-500" aria-label="Twitter-Link">
-                        <BsTwitter />
+                        <BsTwitterX />
                     </a>
                     <button
                         aria-label="Toggle Dark Mode"
