@@ -37,8 +37,8 @@ export default function Hero() {
 
     return (
         <div>
-            <div className="bg-hero-pattern dark:bg-hero-pattern-dark bg-no-repeat bg-cover">
-                <div className="flex flex-col lg:[height:89vh]">
+            <div className="bg-hero-pattern dark:bg-hero-pattern-dark bg-no-repeat bg-cover bg-bottom m-0 p-0">
+                <div className="flex flex-col lg:[height:85vh]">
                     <div
                         className="pb-8 pt-8 md:pt-0 lg:mt-12  w-full lg:max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center">
                         {/* TODO fix border "hole"*/}
@@ -65,19 +65,18 @@ export default function Hero() {
                                     If you require any additional information, please contact me or take a look at my
                                     CV.
                                 </p>
-                                {/* Buttons TODO file loader for cv*/}
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
                                         <Link href="/resources/cv.pdf">
                                             <a download="CV_Fabian_Karl.pdf" target="_blank"
-                                               className="w-full flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 dark:hover:bg-dark-highlight-800">
+                                               className="w-full flex items-center justify-center px-8 md:px:10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-dark-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 dark:hover:bg-dark-highlight-800">
                                                 Download CV
                                             </a>
                                         </Link>
                                     </div>
                                     <div className="mt-3 sm:mt-0 sm:ml-3">
                                         <a href="#contact"
-                                           className="w-full flex items-center justify-center px-8 md:px-10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-secondary-500 dark:bg-dark-secondary-500 hover:bg-secondary-800 dark:bg-dark-secondary-800">
+                                           className="w-full flex items-center justify-center px-8 md:px-10 py-3 md:py-4 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-dark-button-text-500 bg-secondary-500 dark:bg-dark-secondary-500 hover:bg-secondary-800 dark:bg-dark-secondary-800">
                                             Contact me </a>
                                     </div>
                                 </div>
@@ -88,14 +87,16 @@ export default function Hero() {
                         <div className="mt-20 xl:mt-32">
                             <a href="#about" aria-label="scroll down">
                                 <HiOutlineChevronDoubleDown
-                                    className="text-2xl text-headline-500 dark:text-dark-headline-500 animate-bounce hover:text-highlight-500 dark:hover:text-dark-highlight-500"/>
+                                    className="md:text-2xl lg:text-3xl text-headline-500 dark:text-dark-headline-500 animate-bounce hover:text-highlight-500 dark:hover:text-dark-highlight-500"/>
                             </a>
                         </div>
                     </div>
                 </div>
+                <div
+                className="w-full h-24 sm:h-32 md:h-52 lg:h-80 m-0 p-0 block"/>
             </div>
-            <div
-                className="bg-hero-spacer dark:bg-hero-spacer-dark bg-no-repeat bg-cover h-24 sm:h-32 md:h-52 lg:h-80"/>
+
+          
         </div>
     );
 }

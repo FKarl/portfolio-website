@@ -28,7 +28,6 @@
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
-    "@catppuccin/tailwindcss": "^0.1.6",
     "autoprefixer": "^10.4.2",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",

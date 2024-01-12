@@ -116,7 +116,7 @@ export default function Contact({side}) {
                                   className="form-input rounded-xl bg-bg-400 dark:bg-dark-bg-400 text-p-500 dark:text-dark-p-500 border-p-500 dark:border-dark-p-500 focus:outline-none focus:border-highlight-500 focus:dark:border-dark-highlight-500 focus:ring-0"/>
 
                         <input type="submit" value="Send"
-                               className="w-1/2  max-w-xs mt-4 py-2 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 hover:dark:bg-dark-highlight-800"/>
+                               className="w-1/2  max-w-xs mt-4 py-2 border border-transparent text-base md:text-lg rounded-md text-button-text-500 dark:text-dark-button-text-500 bg-highlight-500 dark:bg-dark-highlight-500 hover:bg-highlight-800 hover:dark:bg-dark-highlight-800"/>
 
                     </form>
                 </div>

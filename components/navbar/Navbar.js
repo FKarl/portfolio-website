@@ -9,6 +9,7 @@ import userData from "../../constants/userData";
 export default function Navbar() {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -18,6 +19,10 @@ export default function Navbar() {
         if (mounted) {
             setTheme(theme === "light" ? "dark" : "light");
         }
+    };
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
     };
 
     return (
@@ -32,6 +37,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
+                {/* NavLinks for medium and larger devices */}
                 <NavLinks className="hidden md:block space-x-8 whitespace-nowrap text-headline-500 dark:text-dark-headline-500" />
 
                 <div className="flex flex-row items-center space-x-4">
@@ -53,8 +59,6 @@ export default function Navbar() {
                         {mounted && (theme === "dark" ? <BsSun className="text-yellow-500" /> : <BsMoonFill className="text-yellow-500" />)}
                     </button>
                 </div>
-
-                <NavLinks className="md:hidden mt-4 whitespace-nowrap flex flex-wrap justify-between -m-2 text-headline-500 dark:text-dark-headline-500" childClass="m-2" />
             </div>
         </header>
     );
