@@ -61,7 +61,7 @@ export default function Hero() {
                                          className="mt-1 text-base md:mt-2 sm:text-lg sm:text-center lg:text-left"/>
                                 <p className="mt-3 md:mt-5">
                                     Feel free to explore this website to get a comprehensive overview of my background and skills.
-                                    If you need more information or have any inquiries, please don't hesitate to reach out to me or check out my CV.
+                                    If you need more information or have any inquiries, please don&apos;t hesitate to reach out to me or check out my CV.
                                 </p>
                                 <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
