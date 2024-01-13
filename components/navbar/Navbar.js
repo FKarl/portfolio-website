@@ -47,7 +47,7 @@ export default function Navbar() {
                     <a href={userData.social.linkedin} className="text-headline-500 dark:text-dark-headline-500" aria-label="LinkedIn-Link">
                         <BsLinkedin />
                     </a>
-                    <a href={userData.social.twitter} className="text-headline-500 dark:text-dark-headline-500" aria-label="Twitter-Link">
+                    <a href={userData.social.twitter} className="text-headline-500 dark:text-dark-headline-500" aria-label="TwitterX-Link">
                         <BsTwitterX />
                     </a>
                     <button

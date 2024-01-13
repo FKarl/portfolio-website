@@ -7,6 +7,7 @@ import React from "react";
 import About from "../components/sections/about/About";
 import Resume from "../components/sections/resume/Resume";
 import Skills from "../components/sections/skills/Skills";
+import { Projects } from '../components/sections/projects/Projects';
 import Contact from "../components/sections/contact/Contact";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
@@ -37,6 +38,7 @@ export default function Home() {
                 <Skills side="r"/>
                 <Resume side="l"/>
                 <Contact side="r"/>
+                <Projects/>
             </main>
             <Footer/>
         </>

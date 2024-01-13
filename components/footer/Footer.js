@@ -1,6 +1,6 @@
 import React from "react";
 import userData from "../../constants/userData";
-import {BsGithub, BsLinkedin, BsTwitter} from "react-icons/bs";
+import {BsGithub, BsLinkedin, BsTwitterX} from "react-icons/bs";
 
 export default function Footer() {
     return (
@@ -15,17 +15,17 @@ export default function Footer() {
                     <a href={userData.social.github}
                        aria-label="GitHub-Link"
                     >
-                        <BsGithub/>
+                        <BsGithub alt="GitHub Icon"/>
                     </a>
                     <a href={userData.social.linkedin}
                        aria-label="LinkedIn-Link"
                     >
-                        <BsLinkedin/>
+                        <BsLinkedin alt="LinkedIn Icon"/>
                     </a>
                     <a href={userData.social.twitter}
-                       aria-label="Twitter-Link"
+                       aria-label="TwitterX-Link"
                     >
-                        <BsTwitter/>
+                        <BsTwitterX alt="Twitter Icon"/>
                     </a>
                 </div>
             </div>
