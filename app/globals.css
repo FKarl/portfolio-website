@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Catppuccin Latte (Light) */
+    --background: 220 23% 95%; /* base */
+    --foreground: 234 16% 35%; /* text */
+    
+    --card: 220 23% 95%; /* base */
+    --card-foreground: 234 16% 35%; /* text */
+    
+    --popover: 220 23% 95%; /* base */
+    --popover-foreground: 234 16% 35%; /* text */
+    
+    --primary: 220 91% 54%; /* blue */
+    --primary-foreground: 220 23% 95%; /* base */
+    
+    --secondary: 251 84% 80%; /* lavender */
+    --secondary-foreground: 234 16% 35%; /* text */
+    
+    --muted: 220 14% 88%; /* surface0 */
+    --muted-foreground: 220 18% 45%; /* subtext0 */
+    
+    --accent: 316 72% 86%; /* pink */
+    --accent-foreground: 234 16% 35%; /* text */
+    
+    --destructive: 347 87% 44%; /* red */
+    --destructive-foreground: 220 23% 95%; /* base */
+    
+    --border: 220 14% 88%; /* surface0 */
+    --input: 220 14% 88%; /* surface0 */
+    --ring: 220 91% 54%; /* blue */
+
+    --chart-1: 220 91% 54%; /* blue */
+    --chart-2: 316 72% 86%; /* pink */
+    --chart-3: 251 84% 80%; /* lavender */
+    --chart-4: 126 71% 72%; /* green */
+    --chart-5: 35 86% 77%; /* peach */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Catppuccin Mocha (Dark) */
+    --background: 240 21% 15%; /* base */
+    --foreground: 226 64% 88%; /* text */
+    
+    --card: 240 21% 15%; /* base */
+    --card-foreground: 226 64% 88%; /* text */
+    
+    --popover: 240 21% 15%; /* base */
+    --popover-foreground: 226 64% 88%; /* text */
+    
+    --primary: 217 92% 76%; /* blue */
+    --primary-foreground: 240 21% 15%; /* base */
+    
+    --secondary: 217 92% 76%; /* lavender */
+    --secondary-foreground: 226 64% 88%; /* text */
+    
+    --muted: 236 21% 20%; /* surface0 */
+    --muted-foreground: 228 24% 72%; /* subtext0 */
+    
+    --accent: 316 72% 86%; /* pink */
+    --accent-foreground: 226 64% 88%; /* text */
+    
+    --destructive: 343 81% 75%; /* red */
+    --destructive-foreground: 240 21% 15%; /* base */
+    
+    --border: 236 21% 20%; /* surface0 */
+    --input: 236 21% 20%; /* surface0 */
+    --ring: 217 92% 76%; /* blue */
+
+    --chart-1: 217 92% 76%; /* blue */
+    --chart-2: 316 72% 86%; /* pink */
+    --chart-3: 251 84% 80%; /* lavender */
+    --chart-4: 156 84% 80%; /* green */
+    --chart-5: 21 86% 77%; /* peach */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient background for header */
+.catppuccin-grid {
+  background-image: 
+    linear-gradient(to right, hsl(var(--muted)/0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--muted)/0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
