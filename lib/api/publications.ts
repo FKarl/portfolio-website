@@ -10,7 +10,8 @@ const manualPublications: Publication[] = [
     year: "2023",
     url: "https://aclanthology.org/2023.genbench-1.2/",
     type: "Workshop Paper",
-    manual: true
+    add_tag: "Best Paper Award",
+    doi: "10.18653/v1/2023.genbench-1.2"
   }
 ];
 

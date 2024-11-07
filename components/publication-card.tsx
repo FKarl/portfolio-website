@@ -53,6 +53,9 @@ export function PublicationCard({ publication, index }: PublicationCardProps) {
                     Manual Entry
                   </Badge>
                 )}
+                {publication.add_tag && (
+                    <Badge variant="secondary" className="bg-primary/20" >{publication.add_tag}</Badge>
+                )}
                 {publication.doi && (
                   <Badge variant="outline">DOI: {publication.doi}</Badge>
                 )}

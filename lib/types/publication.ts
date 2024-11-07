@@ -9,4 +9,5 @@ export interface Publication {
   doi?: string;
   key?: string;
   manual?: boolean;
+  add_tag?: string;
 }
