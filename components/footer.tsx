@@ -92,7 +92,7 @@ export function Footer() {
           >
             <h3 className="text-lg font-semibold mb-4">Fabian Karl</h3>
             <p className="text-sm text-muted-foreground max-w-md">
-              Data Scientist and ML Engineer based in Ulm, Germany. Currently
+              Data Scientist and ML Engineer based in Munich, Germany. Currently
               pursuing a Ph.D., focusing on machine learning research and
               development of innovative AI solutions.
             </p>
