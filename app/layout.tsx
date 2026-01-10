@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     default: 'Fabian Karl - Data Scientist & ML Engineer',
     template: '%s | Fabian Karl'
   },
-  description: 'Data Scientist and ML Engineer specializing in Natural Language Processing, Machine Learning research, and AI development. View my portfolio, publications, and research projects.',
-  keywords: ['Data Science', 'Machine Learning', 'NLP', 'AI Research', 'Computer Science', 'PhD Student', 'ML Engineer'],
+  description: 'Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research. View my portfolio, publications, and research projects.',
+  keywords: ['Data Science', 'Machine Learning', 'Medical NLP', 'NLP', 'AI Research', 'Computer Science', 'PhD Student', 'ML Engineer', 'TUM', 'Information Retrieval'],
   authors: [{ name: 'Fabian Karl' }],
   creator: 'Fabian Karl',
   openGraph: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.fkarl.de',
     title: 'Fabian Karl - Data Scientist & ML Engineer',
-    description: 'Data Scientist and ML Engineer specializing in Natural Language Processing, Machine Learning research, and AI development.',
+    description: 'Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research.',
     siteName: 'Fabian Karl Portfolio',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Fabian Karl - Data Scientist & ML Engineer',
-    description: 'Data Scientist and ML Engineer specializing in Natural Language Processing, Machine Learning research, and AI development.',
+    description: 'Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research.',
     creator: '@FabiKarl',
     images: ['/assets/hero/avatar.jpg']
   },
@@ -82,13 +82,13 @@ export default function RootLayout({
               jobTitle: "Data Scientist",
               worksFor: {
                 "@type": "Organization",
-                name: "Ulm University"
+                name: "Technical University of Munich (TUM)"
               },
               alumniOf: {
                 "@type": "Organization",
                 name: "Ulm University"
               },
-              description: "Data Scientist and ML Engineer specializing in Natural Language Processing and Machine Learning research."
+              description: "Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research."
             })
           }}
       />

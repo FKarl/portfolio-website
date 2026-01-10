@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Fabian Karl - Data Scientist & ML Engineer',
     short_name: 'Fabian Karl',
-    description: 'Data Scientist and ML Engineer specializing in Natural Language Processing and Machine Learning research.',
+    description: 'Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
