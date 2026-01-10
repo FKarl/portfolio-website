@@ -67,7 +67,7 @@ const socialLinks = [
     id: 'social-email',
     name: 'Email',
     icon: Mail,
-    href: 'mailto:fabian.karl@uni-ulm.de',
+    href: 'mailto:fabian.karl@tum.de',
   },
   {
     id: 'social-scholar',

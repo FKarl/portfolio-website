@@ -11,7 +11,7 @@ const socialLinks = [
     id: 'email',
     name: 'Email',
     icon: Mail,
-    href: 'mailto:fabian.karl@uni-ulm.de',
+    href: 'mailto:fabian.karl@tum.de',
     description: 'Send me an email',
     color: 'bg-red-500/10 hover:bg-red-500/20 text-red-600 dark:text-red-400',
   },

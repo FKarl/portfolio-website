@@ -6,9 +6,15 @@ import { Calendar } from "lucide-react"
 
 const timelineItems = [
   {
+    year: "2025",
+    title: "Ph.D. Research in Medical NLP at TUM",
+    description: "Moved to the Technical University of Munich (TUM) to continue doctoral research at the Chair of Software Engineering for Business Information Systems (sebis), focusing on Medical NLP with research interests in information retrieval, synthetic data generation, and model evaluation.",
+    icon: Calendar
+  },
+  {
     year: "2024",
     title: "Ph.D. Research in Natural Language Processing",
-    description: "Began doctoral research at Ulm University, focusing on advanced Natural Language Processing techniques to enhance machine understanding and generation of human language.",
+    description: "Started doctoral research at Ulm University, focusing on advanced Natural Language Processing techniques to enhance machine understanding and generation of human language.",
     icon: Calendar
   },
   {
