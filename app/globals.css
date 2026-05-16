@@ -4,108 +4,85 @@
 
 @layer base {
   :root {
-    /* Catppuccin Latte (Light) */
-    --background: 220 23% 95%; /* base */
-    --foreground: 234 16% 35%; /* text */
-    
-    --card: 220 23% 95%; /* base */
-    --card-foreground: 234 16% 35%; /* text */
-    
-    --popover: 220 23% 95%; /* base */
-    --popover-foreground: 234 16% 35%; /* text */
-    
-    --primary: 220 91% 54%; /* blue */
-    --primary-foreground: 220 23% 95%; /* base */
-    
-    --secondary: 251 84% 80%; /* lavender */
-    --secondary-foreground: 234 16% 35%; /* text */
-    
-    --muted: 220 14% 88%; /* surface0 */
-    --muted-foreground: 220 18% 45%; /* subtext0 */
-    
-    --accent: 316 72% 86%; /* pink */
-    --accent-foreground: 234 16% 35%; /* text */
-    
-    --destructive: 347 87% 44%; /* red */
-    --destructive-foreground: 220 23% 95%; /* base */
-    
-    --border: 220 14% 88%; /* surface0 */
-    --input: 220 14% 88%; /* surface0 */
-    --ring: 220 91% 54%; /* blue */
-
-    --chart-1: 220 91% 54%; /* blue */
-    --chart-2: 316 72% 86%; /* pink */
-    --chart-3: 251 84% 80%; /* lavender */
-    --chart-4: 126 71% 72%; /* green */
-    --chart-5: 35 86% 77%; /* peach */
-
-    --radius: 0.5rem;
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --surface-2: #efeee8;
+    --ink: #0e0d0c;
+    --ink-2: #4a4945;
+    --ink-3: #9a9892;
+    --rule: #e4e2d9;
+    --accent: oklch(0.52 0.20 264);
+    --accent-soft: oklch(0.52 0.20 264 / 0.10);
+    --accent-line: oklch(0.52 0.20 264 / 0.25);
+    --good: oklch(0.65 0.16 150);
+    --r: 14px;
+    --r-sm: 8px;
+    --pad-x: clamp(20px, 5vw, 80px);
+    --shadow-sm: 0 1px 0 color-mix(in oklab, var(--ink) 6%, transparent);
+    --shadow: 0 1px 2px color-mix(in oklab, var(--ink) 5%, transparent), 0 8px 24px color-mix(in oklab, var(--ink) 6%, transparent);
+    --shadow-lg: 0 4px 8px color-mix(in oklab, var(--ink) 6%, transparent), 0 24px 48px color-mix(in oklab, var(--ink) 8%, transparent);
   }
 
-  .dark {
-    /* Catppuccin Mocha (Dark) */
-    --background: 240 21% 15%; /* base */
-    --foreground: 226 64% 88%; /* text */
-    
-    --card: 240 21% 15%; /* base */
-    --card-foreground: 226 64% 88%; /* text */
-    
-    --popover: 240 21% 15%; /* base */
-    --popover-foreground: 226 64% 88%; /* text */
-    
-    --primary: 217 92% 76%; /* blue */
-    --primary-foreground: 240 21% 15%; /* base */
-    
-    --secondary: 217 92% 76%; /* lavender */
-    --secondary-foreground: 226 64% 88%; /* text */
-    
-    --muted: 236 21% 20%; /* surface0 */
-    --muted-foreground: 228 24% 72%; /* subtext0 */
-    
-    --accent: 316 72% 86%; /* pink */
-    --accent-foreground: 226 64% 88%; /* text */
-    
-    --destructive: 343 81% 75%; /* red */
-    --destructive-foreground: 240 21% 15%; /* base */
-    
-    --border: 236 21% 20%; /* surface0 */
-    --input: 236 21% 20%; /* surface0 */
-    --ring: 217 92% 76%; /* blue */
-
-    --chart-1: 217 92% 76%; /* blue */
-    --chart-2: 316 72% 86%; /* pink */
-    --chart-3: 251 84% 80%; /* lavender */
-    --chart-4: 156 84% 80%; /* green */
-    --chart-5: 21 86% 77%; /* peach */
+  :root[data-theme="dark"] {
+    --bg: #0d0c0a;
+    --surface: #15140f;
+    --surface-2: #1c1b15;
+    --ink: #f0eee5;
+    --ink-2: #b3b0a4;
+    --ink-3: #6d6a5e;
+    --rule: #25231c;
+    --accent: oklch(0.72 0.16 264);
+    --accent-soft: oklch(0.72 0.16 264 / 0.16);
+    --accent-line: oklch(0.72 0.16 264 / 0.35);
+    --shadow-sm: 0 1px 0 rgba(0,0,0,.4);
+    --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.4);
+    --shadow-lg: 0 4px 8px rgba(0,0,0,.5), 0 24px 48px rgba(0,0,0,.5);
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
   body {
-    @apply bg-background text-foreground;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .25s ease, color .25s ease;
   }
+
+  ::selection {
+    background: var(--accent);
+    color: white;
+  }
+
+  a { color: inherit; }
 }
 
-/* Custom gradient background for header */
-.catppuccin-grid {
-  background-image: 
-    linear-gradient(to right, hsl(var(--muted)/0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--muted)/0.1) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* ---- Keyframes ---- */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--good) 60%, transparent); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
 
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes ring-pulse {
+  0% { transform: scale(.6); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 10s linear infinite;
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s infinite;
+}
+
+.animate-ring-pulse {
+  animation: ring-pulse 2.2s ease-out infinite;
+}
+
+/* ---- Section common ---- */
+.section-pad {
+  padding: clamp(64px, 8vw, 112px) var(--pad-x);
+}
+
+.container-design {
+  max-width: 1280px;
+  margin: 0 auto;
 }

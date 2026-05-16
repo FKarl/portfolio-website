@@ -1,134 +1,65 @@
-'use client';
+"use client"
 
-import { motion } from 'framer-motion';
-import { Card } from './ui/card';
-import { Mail, Linkedin, Github, BookOpen } from 'lucide-react';
-import { XIcon } from './ui/XIcon';
-import { Button } from './ui/button';
-
-const socialLinks = [
-  {
-    id: 'email',
-    name: 'Email',
-    icon: Mail,
-    href: 'mailto:fabian.karl@tum.de',
-    description: 'Send me an email',
-    color: 'bg-red-500/10 hover:bg-red-500/20 text-red-600 dark:text-red-400',
-  },
-  {
-    id: 'linkedin',
-    name: 'LinkedIn',
-    icon: Linkedin,
-    href: 'https://www.linkedin.com/in/FKarl',
-    description: 'Connect with me on LinkedIn',
-    color:
-      'bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400',
-  },
-  {
-    id: 'github',
-    name: 'GitHub',
-    icon: Github,
-    href: 'https://github.com/FKarl',
-    description: 'Check out my code',
-    color:
-      'bg-gray-500/10 hover:bg-gray-500/20 text-gray-600 dark:text-gray-400',
-  },
-  {
-    id: 'twitter',
-    name: 'Twitter',
-    icon: XIcon,
-    href: 'https://twitter.com/FabiKarl',
-    description: 'Follow me on Twitter',
-    color: 'bg-black/10 hover:bg-black/20 text-black dark:text-white',
-  },
-  {
-    id: 'scholar',
-    name: 'DBLP',
-    icon: BookOpen,
-    href: 'https://dblp.uni-trier.de/pid/239/6427-1.html',
-    description: 'View my publications',
-    color:
-      'bg-green-500/10 hover:bg-green-500/20 text-green-600 dark:text-green-400',
-  },
-] as const;
+import { useI18n } from "@/lib/i18n-context"
 
 export function Contact() {
+  const { t } = useI18n()
+
   return (
-    <section id="contact" className="py-24 px-4 bg-secondary/30">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-muted-foreground">
-            Have a question or interested in collaboration? Feel free to reach
-            out through any of these platforms!
-          </p>
-        </motion.div>
+    <section id="contact" className="section-pad" style={{ background: "var(--surface)", borderTop: "1px solid var(--rule)" }}>
+      <div className="container-design">
+        <div style={{ display: "flex", alignItems: "end", gap: 24, marginBottom: 36, flexWrap: "wrap" as const }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-mono, monospace)", fontSize: 11, color: "var(--accent)", letterSpacing: ".12em", textTransform: "uppercase" as const, marginBottom: 10 }}>{t.contact.kicker}</div>
+            <h2 style={{ fontWeight: 500, fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-.028em", lineHeight: 1.02, margin: 0 }}>
+              {t.contact.titleA}{" "}
+              <em style={{ fontFamily: "var(--font-serif, serif)", fontStyle: "italic", fontWeight: 400, color: "var(--accent)", letterSpacing: "-.015em" }}>{t.contact.titleB}</em>
+            </h2>
+          </div>
+        </div>
 
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <Card className="p-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {socialLinks.map((link, index) => {
-                // Calculate the delay based on the visual position in the grid
-                const row = Math.floor(index / 3);
-                const col = index % 3;
-                const delay = (row * 3 + col) * 0.1;
+        <p style={{
+          fontFamily: "var(--font-serif, serif)", fontStyle: "italic",
+          fontSize: "clamp(24px, 3vw, 38px)", lineHeight: 1.25,
+          color: "var(--ink)", maxWidth: "38rem",
+          margin: "0 0 36px",
+        }}>
+          {t.contact.body}
+        </p>
 
-                return (
-                  <motion.div
-                    key={link.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay }}
-                    viewport={{ once: true }}
-                    className={`${
-                      // Center the last item if it would be alone in its row
-                      index === socialLinks.length - 1 &&
-                      socialLinks.length % 2 !== 0
-                        ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2'
-                        : ''
-                    }`}
-                  >
-                    <a
-                      href={link.href}
-                      target={
-                        link.href.startsWith('mailto:') ? undefined : '_blank'
-                      }
-                      rel={
-                        link.href.startsWith('mailto:')
-                          ? undefined
-                          : 'noopener noreferrer'
-                      }
-                      className="block h-full"
-                    >
-                      <Button
-                        variant="ghost"
-                        className={`w-full h-full justify-start gap-4 p-4 ${link.color} transition-colors duration-200`}
-                      >
-                        <link.icon className="w-5 h-5 shrink-0" />
-                        <div className="flex flex-col items-start">
-                          <span className="font-semibold">{link.name}</span>
-                          <span className="text-sm opacity-80">
-                            {link.description}
-                          </span>
-                        </div>
-                      </Button>
-                    </a>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </Card>
-        </motion.div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {t.contact.channels.map(ch => (
+            <ContactCard key={ch.label} channel={ch} />
+          ))}
+        </div>
       </div>
     </section>
-  );
+  )
+}
+
+function ContactCard({ channel }: { channel: { label: string; value: string; href: string } }) {
+  return (
+    <a href={channel.href} target={channel.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener"
+      style={{
+        background: "var(--bg)", border: "1px solid var(--rule)",
+        borderRadius: "var(--r)", padding: "22px 24px",
+        textDecoration: "none", color: "inherit",
+        display: "flex", flexDirection: "column", gap: 6,
+        transition: "all .2s ease",
+        position: "relative", overflow: "hidden",
+      }}
+      onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "var(--ink)"; (e.currentTarget as HTMLAnchorElement).style.color = "var(--bg)"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--ink)" }}
+      onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "var(--bg)"; (e.currentTarget as HTMLAnchorElement).style.color = ""; (e.currentTarget as HTMLAnchorElement).style.transform = ""; (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--rule)" }}
+    >
+      {/* Arrow indicator */}
+      <span style={{
+        position: "absolute", top: 20, right: 22,
+        fontSize: 16, color: "var(--ink-3)",
+        transition: "all .2s ease",
+        pointerEvents: "none",
+      }}>→</span>
+      <span style={{ fontFamily: "var(--font-mono, monospace)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase" as const, color: "var(--ink-3)" }}>{channel.label}</span>
+      <span style={{ fontSize: 18, fontWeight: 500, paddingRight: 28 }}>{channel.value}</span>
+    </a>
+  )
 }

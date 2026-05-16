@@ -1,118 +1,123 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Card } from "./ui/card"
-import { Calendar } from "lucide-react"
-
-const timelineItems = [
-  {
-    year: "2025",
-    title: "Ph.D. Research in Medical NLP at TUM",
-    description: "Moved to the Technical University of Munich (TUM) to continue doctoral research at the Chair of Software Engineering for Business Information Systems (sebis), focusing on Medical NLP with research interests in information retrieval, synthetic data generation, and model evaluation.",
-    icon: Calendar
-  },
-  {
-    year: "2024",
-    title: "Ph.D. Research in Natural Language Processing",
-    description: "Started doctoral research at Ulm University, focusing on advanced Natural Language Processing techniques to enhance machine understanding and generation of human language.",
-    icon: Calendar
-  },
-  {
-    year: "2024",
-    title: "Master's Degree in Computer Science",
-    description: "Graduated with an MSc in Computer Science (Grade: 1.2), with a thesis titled \"Retrieval Augmented Information Extraction: Enhancing Language Models for Extracting Bibliographic Metadata from Heterogeneous Web Sources with CRAWLDoc\".",
-    icon: Calendar
-  },
-  {
-    year: "2022",
-    title: "Student Research Assistant in Data Science",
-    description: "Contributed to research projects in the fields of Natural Language Processing and language models while pursuing my Master's degree, co-authoring papers on topics like transformer-based models and text classification.",
-    icon: Calendar
-  },
-  {
-    year: "2022",
-    title: "Bachelor's Degree in Computer Science",
-    description: "Completed a Bachelor's degree in Computer Science (Grade: 1.3), with a thesis titled \"Transformers are Short Text Classiﬁers: A Study of Inductive Short Text Classiﬁers on Benchmarks and Real-world Datasets\".",
-    icon: Calendar
-  },
-]
+import { useI18n } from "@/lib/i18n-context"
 
 export function Timeline() {
+  const { t } = useI18n()
+
   return (
-    <section id="timeline" className="py-24 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-16"
-        >
-          Academic Journey
-        </motion.h2>
-
-        <div className="relative">
-          {/* Vertical line */}
-          <div 
-            className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary/50 via-primary/20 to-transparent"
-            style={{ marginTop: "24px" }}
-          />
-
-          <div className="space-y-24">
-            {timelineItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="relative group"
-              >
-                {/* Center marker with animated ring */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 -mt-4 flex flex-col items-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-primary/20 group-hover:scale-125 transition-transform duration-300" />
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center z-10 shadow-lg border-4 border-background relative">
-                      <Calendar className="w-5 h-5 text-primary-foreground" />
-                      {/* Connector lines */}
-                      <div 
-                        className={`absolute top-1/2 h-0.5 from-primary/50 to-transparent
-                          ${index % 2 === 0 
-                            ? 'bg-gradient-to-l right-full w-[calc(24rem-6px)]' 
-                            : 'bg-gradient-to-r left-full w-[calc(24rem-6px)]'
-                          }
-                          hidden md:block
-                        `}
-                      />
-                    </div>
-                  </div>
-                  <div className="mt-2 px-4 py-1 rounded-full bg-muted shadow-sm border">
-                    <span className="text-sm font-semibold text-primary">{item.year}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
-                  <motion.div
-                    initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className={`${index % 2 === 0 ? 'md:pr-16' : 'md:col-start-2 md:pl-16'}`}
-                  >
-                    <Card className="p-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="relative">
-                        <h3 className="font-bold text-xl mb-3 text-foreground/90">{item.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                      </div>
-                    </Card>
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
+    <section id="timeline" className="section-pad">
+      <div className="container-design">
+        <div style={{ display: "flex", alignItems: "end", gap: 24, marginBottom: 48, flexWrap: "wrap" as const }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-mono, monospace)", fontSize: 11, color: "var(--accent)", letterSpacing: ".12em", textTransform: "uppercase" as const, marginBottom: 10 }}>{t.timeline.kicker}</div>
+            <h2 style={{ fontWeight: 500, fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-.028em", lineHeight: 1.02, margin: 0 }}>
+              {t.timeline.titleA}{" "}
+              <em style={{ fontFamily: "var(--font-serif, serif)", fontStyle: "italic", fontWeight: 400, color: "var(--accent)", letterSpacing: "-.015em" }}>{t.timeline.titleB}</em>
+            </h2>
           </div>
+        </div>
+
+        <div style={{ position: "relative", paddingLeft: 8 }}>
+          {t.timeline.items.map((item, i) => (
+            <TimelineRow key={i} item={item} isFirst={i === 0} isLast={i === t.timeline.items.length - 1} />
+          ))}
         </div>
       </div>
     </section>
+  )
+}
+
+function TimelineRow({ item, isFirst, isLast }: { item: { year: string; title: string; org: string; body: string }; isFirst: boolean; isLast: boolean }) {
+  return (
+    <div
+      className="tl-row"
+      style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8, paddingBottom: 8, position: "relative" }}
+      onMouseEnter={e => {
+        const yr = e.currentTarget.querySelector(".tl-yr-dot") as HTMLElement | null
+        if (yr) { yr.style.transform = "scale(1.3)"; yr.style.background = "var(--accent)" }
+      }}
+      onMouseLeave={e => {
+        const yr = e.currentTarget.querySelector(".tl-yr-dot") as HTMLElement | null
+        if (yr) { yr.style.transform = ""; yr.style.background = "var(--bg)" }
+      }}
+    >
+      <style>{`
+        @media (min-width: 760px) {
+          .tl-row { grid-template-columns: 160px 1fr !important; gap: 48px !important; }
+          .tl-yr { padding-left: 36px !important; }
+          .tl-yr-dot { left: 10px !important; top: 14px !important; }
+          .tl-yr-line { left: 15px !important; top: 26px !important; }
+          .tl-card { margin-left: 0 !important; }
+        }
+        @media (max-width: 759px) {
+          .tl-yr { padding-left: 28px !important; font-size: 36px !important; }
+          .tl-card { margin-left: 28px; margin-bottom: 12px; }
+        }
+      `}</style>
+
+      {/* Year column */}
+      <div className="tl-yr" style={{
+        fontFamily: "var(--font-serif, serif)", fontStyle: "italic",
+        fontSize: "clamp(40px, 5vw, 64px)", lineHeight: 1, letterSpacing: "-.025em",
+        color: "var(--ink)", position: "relative", paddingLeft: 36,
+        paddingTop: 2, alignSelf: "start",
+      }}>
+        {/* Dot */}
+        <span className="tl-yr-dot" style={{
+          content: "", position: "absolute", left: 10, top: 14,
+          width: 12, height: 12, borderRadius: "50%",
+          background: "var(--bg)", border: "2px solid var(--accent)",
+          boxShadow: "0 0 0 4px var(--bg)", zIndex: 2,
+          transition: "transform .2s ease, background .2s ease",
+          display: "block",
+        }} />
+        {/* Line */}
+        {!isLast && (
+          <span className="tl-yr-line" style={{
+            position: "absolute", left: 15, top: 26, bottom: -32,
+            width: 2,
+            background: isLast ? "linear-gradient(180deg, var(--accent-line), transparent)" : "var(--accent-line)",
+            zIndex: 1, display: "block",
+          }} />
+        )}
+        {item.year}
+        {isFirst && (
+          <span style={{
+            display: "block", fontFamily: "var(--font-mono, monospace)", fontSize: 10,
+            fontStyle: "normal", letterSpacing: ".12em", color: "var(--ink-3)",
+            textTransform: "uppercase" as const, marginTop: 8,
+          }}>present</span>
+        )}
+      </div>
+
+      {/* Card */}
+      <div className="tl-card"
+        style={{
+          background: "var(--surface)", border: "1px solid var(--rule)",
+          borderRadius: "var(--r)", padding: "22px 26px", marginBottom: 24,
+          transition: "all .25s cubic-bezier(.2,.7,.2,1)",
+          boxShadow: "var(--shadow-sm)", position: "relative",
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLDivElement).style.borderColor = "var(--accent-line)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "var(--shadow)" }}
+        onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = ""; (e.currentTarget as HTMLDivElement).style.borderColor = "var(--rule)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "var(--shadow-sm)" }}
+      >
+        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap" as const, marginBottom: 8 }}>
+          <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, letterSpacing: "-.01em", lineHeight: 1.25 }}>{item.title}</h3>
+          <span style={{
+            display: "inline-flex", alignItems: "center", gap: 8,
+            fontFamily: "var(--font-mono, monospace)", fontSize: 11,
+            color: "var(--ink-2)", letterSpacing: ".04em",
+            padding: "3px 10px", borderRadius: 999,
+            background: "var(--surface-2)", border: "1px solid var(--rule)",
+            whiteSpace: "nowrap" as const,
+          }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--accent)", flexShrink: 0 }} />
+            {item.org}
+          </span>
+        </div>
+        <p style={{ color: "var(--ink-2)", fontSize: 14.5, lineHeight: 1.55, margin: 0, maxWidth: "38rem" }}>{item.body}</p>
+      </div>
+    </div>
   )
 }

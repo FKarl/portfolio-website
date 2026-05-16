@@ -1,54 +1,56 @@
-'use client';
+"use client"
 
-import { motion } from 'framer-motion';
-import { Card } from './ui/card';
-import { Progress } from './ui/progress';
-
-const skills = [
-  { name: 'Machine Learning', level: 95 },
-  { name: 'Natural Language Processing', level: 100 },
-  { name: 'Computer Vision', level: 75 },
-  { name: 'Python', level: 90 },
-  { name: 'PyTorch', level: 90 },
-  { name: 'TensorFlow', level: 65 },
-  { name: 'Git', level: 100 },
-  { name: 'Research & Publication', level: 85 },
-];
+import { useI18n } from "@/lib/i18n-context"
 
 export function Skills() {
+  const { t } = useI18n()
+
   return (
-    <section id="skills" className="py-24 px-4">
-      <div className="container mx-auto">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12"
-        >
-          Technical Skills
-        </motion.h2>
-        <Card className="p-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="mb-2 flex justify-between items-center">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {skill.level}%
-                  </span>
-                </div>
-                <Progress value={skill.level} className="h-2" />
-              </motion.div>
-            ))}
+    <section id="skills" className="section-pad">
+      <div className="container-design">
+        <div style={{ display: "flex", alignItems: "end", gap: 24, marginBottom: 48, flexWrap: "wrap" as const }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-mono, monospace)", fontSize: 11, color: "var(--accent)", letterSpacing: ".12em", textTransform: "uppercase" as const, marginBottom: 10 }}>{t.skills.kicker}</div>
+            <h2 style={{ fontWeight: 500, fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-.028em", lineHeight: 1.02, margin: 0 }}>
+              {t.skills.titleA}{" "}
+              <em style={{ fontFamily: "var(--font-serif, serif)", fontStyle: "italic", fontWeight: 400, color: "var(--accent)", letterSpacing: "-.015em" }}>{t.skills.titleB}</em>
+            </h2>
           </div>
-        </Card>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {t.skills.groups.map(group => (
+            <div key={group.name} style={{
+              background: "var(--surface)", border: "1px solid var(--rule)",
+              borderRadius: "var(--r)", padding: 26,
+            }}>
+              <h3 style={{
+                fontFamily: "var(--font-mono, monospace)", fontSize: 11,
+                color: "var(--ink-3)", letterSpacing: ".14em", textTransform: "uppercase" as const,
+                margin: "0 0 18px", display: "flex", alignItems: "center", gap: 8,
+              }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--accent)", display: "inline-block" }} />
+                {group.name}
+              </h3>
+              <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 6 }}>
+                {group.items.map(skill => (
+                  <span key={skill}
+                    style={{
+                      padding: "6px 12px", borderRadius: 999,
+                      background: "var(--bg)", border: "1px solid var(--rule)",
+                      fontSize: 13, transition: "all .15s ease", cursor: "default",
+                    }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLSpanElement).style.background = "var(--accent)"; (e.currentTarget as HTMLSpanElement).style.color = "white"; (e.currentTarget as HTMLSpanElement).style.borderColor = "var(--accent)"; (e.currentTarget as HTMLSpanElement).style.transform = "translateY(-1px)" }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLSpanElement).style.background = "var(--bg)"; (e.currentTarget as HTMLSpanElement).style.color = ""; (e.currentTarget as HTMLSpanElement).style.borderColor = "var(--rule)"; (e.currentTarget as HTMLSpanElement).style.transform = "" }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-  );
+  )
 }
