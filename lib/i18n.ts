@@ -14,12 +14,17 @@ export interface TimelineItem {
   body: string
 }
 
+export interface ProjectLink {
+  label: string
+  href: string
+}
+
 export interface ProjectItem {
   title: string
   tag: string
   body: string
-  link: string
-  linkLabel: string
+  image?: string
+  links: ProjectLink[]
 }
 
 export interface SkillGroup {
@@ -49,7 +54,7 @@ export interface I18nContent {
   skills: { kicker: string; titleA: string; titleB: string; groups: SkillGroup[] }
   contact: { kicker: string; titleA: string; titleB: string; body: string; channels: ContactChannel[] }
   footer: { tag: string; colophon: string }
-  stats: { pubs: string; years: string; msc: string; deltaPubs: string; deltaYears: string; deltaGrade: string }
+  stats: { pubs: string; years: string; msc: string; bsc: string; deltaPubs: string; deltaYears: string; deltaGrade: string; deltaBsc: string }
 }
 
 const en: I18nContent = {
@@ -120,10 +125,10 @@ const en: I18nContent = {
     titleA: "Selected",
     titleB: "projects.",
     items: [
-      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "A robust ranking dataset for bibliographic web documents. Built to stress-test retrieval-augmented extraction across heterogeneous sources.", link: "https://arxiv.org/abs/2406.06947", linkLabel: "Paper" },
-      { title: "German Party Manifestos", tag: "NLP · Topic Modeling", body: "Semi-automatic analysis of major German party manifestos using LDA, HDP, and BERT. Interactive demo ranks summaries and scores positions.", link: "https://www.tadl.fkarl.de/", linkLabel: "Demo" },
-      { title: "Efficient Inferencing", tag: "Small LMs", body: "Distillation, pruning, and quantization for academic-writing feedback. Benchmarked on server CPUs, laptops, and SoC devices.", link: "https://github.com/FKarl/Efficient-Inferencing", linkLabel: "Code" },
-      { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirical study of thirteen sampling strategies for Graph-MLP across six benchmarks. Sampling is a hyperparameter, not a default.", link: "https://github.com/FKarl/Graph-MLP-Sampling", linkLabel: "Code" },
+      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "A robust ranking dataset for bibliographic web documents. Built to stress-test retrieval-augmented extraction across heterogeneous sources.", links: [{ label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "German Party Manifestos", tag: "NLP · Topic Modeling", body: "Semi-automatic analysis of major German party manifestos using LDA, HDP, and BERT. Interactive demo ranks summaries and scores positions.", image: "/assets/projects/tadl/p1.png", links: [{ label: "Demo", href: "https://www.tadl.fkarl.de/" }, { label: "Code", href: "https://github.com/FKarl/short-text-classification" }] },
+      { title: "Efficient Inferencing", tag: "Small LMs", body: "Distillation, pruning, and quantization for academic-writing feedback. Benchmarked on server CPUs, laptops, and SoC devices.", image: "/assets/projects/eff_inference/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Efficient-Inferencing" }, { label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirical study of thirteen sampling strategies for Graph-MLP across six benchmarks. Sampling is a hyperparameter, not a default.", image: "/assets/projects/Graph-MLP/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Graph-MLP-Sampling" }] },
     ],
   },
   skills: {
@@ -150,8 +155,8 @@ const en: I18nContent = {
       { label: "DBLP", value: "239/6427-1", href: "https://dblp.uni-trier.de/pid/239/6427-1.html" },
     ],
   },
-  footer: { tag: "Made in Munich", colophon: "Inter & Instrument Serif · No trackers" },
-  stats: { pubs: "Publications", years: "Years coding", msc: "M.Sc. grade", deltaPubs: "↑ live from DBLP", deltaYears: "since 2017", deltaGrade: "Ulm '24" },
+  footer: { tag: "PhD candidate · TU München", colophon: "No trackers" },
+  stats: { pubs: "Publications", years: "Years coding", msc: "M.Sc. grade", bsc: "B.Sc. grade", deltaPubs: "↑ live from DBLP", deltaYears: "since 2017", deltaGrade: "Ulm '24", deltaBsc: "Ulm '22" },
 }
 
 const de: I18nContent = {
@@ -222,10 +227,10 @@ const de: I18nContent = {
     titleA: "Ausgewählte",
     titleB: "Projekte.",
     items: [
-      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "Ein robuster Ranking-Datensatz für bibliografische Web-Dokumente — gebaut, um Retrieval-augmentierte Extraktion über heterogene Quellen hinweg zu testen.", link: "https://arxiv.org/abs/2406.06947", linkLabel: "Paper" },
-      { title: "Deutsche Wahlprogramme", tag: "NLP · Topic Modeling", body: "Halbautomatische Analyse großer deutscher Wahlprogramme mit LDA, HDP und BERT. Interaktive Demo bewertet Zusammenfassungen.", link: "https://www.tadl.fkarl.de/", linkLabel: "Demo" },
-      { title: "Effiziente Inferenz", tag: "Kleine Sprachmodelle", body: "Distillation, Pruning und Quantisierung für akademisches Schreibfeedback — gebenchmarkt auf Server-CPUs, Laptops und SoC-Geräten.", link: "https://github.com/FKarl/Efficient-Inferencing", linkLabel: "Code" },
-      { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirische Studie zu dreizehn Sampling-Strategien für Graph-MLP über sechs Benchmarks. Sampling ist ein Hyperparameter, kein Default.", link: "https://github.com/FKarl/Graph-MLP-Sampling", linkLabel: "Code" },
+      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "Ein robuster Ranking-Datensatz für bibliografische Web-Dokumente — gebaut, um Retrieval-augmentierte Extraktion über heterogene Quellen hinweg zu testen.", links: [{ label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "Deutsche Wahlprogramme", tag: "NLP · Topic Modeling", body: "Halbautomatische Analyse großer deutscher Wahlprogramme mit LDA, HDP und BERT. Interaktive Demo bewertet Zusammenfassungen.", image: "/assets/projects/tadl/p1.png", links: [{ label: "Demo", href: "https://www.tadl.fkarl.de/" }, { label: "Code", href: "https://github.com/FKarl/short-text-classification" }] },
+      { title: "Effiziente Inferenz", tag: "Kleine Sprachmodelle", body: "Distillation, Pruning und Quantisierung für akademisches Schreibfeedback — gebenchmarkt auf Server-CPUs, Laptops und SoC-Geräten.", image: "/assets/projects/eff_inference/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Efficient-Inferencing" }, { label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirische Studie zu dreizehn Sampling-Strategien für Graph-MLP über sechs Benchmarks. Sampling ist ein Hyperparameter, kein Default.", image: "/assets/projects/Graph-MLP/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Graph-MLP-Sampling" }] },
     ],
   },
   skills: {
@@ -252,8 +257,8 @@ const de: I18nContent = {
       { label: "DBLP", value: "239/6427-1", href: "https://dblp.uni-trier.de/pid/239/6427-1.html" },
     ],
   },
-  footer: { tag: "Made in Munich", colophon: "Inter & Instrument Serif · Keine Tracker" },
-  stats: { pubs: "Publikationen", years: "Jahre Code", msc: "M.Sc.-Note", deltaPubs: "↑ live aus DBLP", deltaYears: "seit 2017", deltaGrade: "Ulm '24" },
+  footer: { tag: "Doktorand · TU München", colophon: "Keine Tracker" },
+  stats: { pubs: "Publikationen", years: "Jahre Code", msc: "M.Sc.-Note", bsc: "B.Sc.-Note", deltaPubs: "↑ live aus DBLP", deltaYears: "seit 2017", deltaGrade: "Ulm '24", deltaBsc: "Ulm '22" },
 }
 
 export const i18n: Record<Lang, I18nContent> = { en, de }

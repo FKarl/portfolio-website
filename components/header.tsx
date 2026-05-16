@@ -9,6 +9,7 @@ function StatBar({ pubCount }: { pubCount: number | null }) {
     { v: pubCount !== null ? String(pubCount) : "—", k: t.stats.pubs, delta: t.stats.deltaPubs },
     { v: "9", k: t.stats.years, delta: t.stats.deltaYears },
     { v: "1.2", k: t.stats.msc, delta: t.stats.deltaGrade },
+    { v: "1.3", k: t.stats.bsc, delta: t.stats.deltaBsc },
   ]
 
   return (
@@ -17,7 +18,7 @@ function StatBar({ pubCount }: { pubCount: number | null }) {
       background: "var(--rule)",
       border: "1px solid var(--rule)",
       borderRadius: "var(--r)", overflow: "hidden",
-    }} className="grid gap-px grid-cols-2 sm:grid-cols-3">
+    }} className="grid gap-px grid-cols-2 sm:grid-cols-4">
       {stats.map((s) => (
         <div key={s.k}
           style={{ background: "var(--surface)", padding: "22px 24px", display: "flex", flexDirection: "column", gap: 4, transition: "background .15s ease", cursor: "default" }}
@@ -99,7 +100,7 @@ export function Header() {
 
         {/* Right: portrait */}
         <div>
-          <div style={{ position: "relative", aspectRatio: "4/5", maxWidth: 380, marginLeft: "auto", width: "100%" }}>
+          <div style={{ position: "relative", aspectRatio: "4/5", maxWidth: 380, margin: "0 auto", width: "100%" }}>
             <div
               style={{ position: "absolute", inset: 0, borderRadius: 20, background: "var(--surface)", border: "1px solid var(--rule)", boxShadow: "var(--shadow-lg)", overflow: "hidden", transition: "transform .4s cubic-bezier(.2,.7,.2,1)" }}
               onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px) rotate(-0.6deg)"}

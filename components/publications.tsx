@@ -102,7 +102,7 @@ async function loadPubs(): Promise<{ source: "dblp" | "fallback"; pubs: Pub[] }>
   }
 }
 
-const PUB_LIMIT = 10
+const PUB_LIMIT = 5
 const FILTER_ORDER = ["all", "conference", "journal", "workshop", "preprint", "thesis"]
 
 export function Publications() {
