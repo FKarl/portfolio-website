@@ -83,7 +83,7 @@ const en: I18nContent = {
       { k: "Based in", v: "Munich" },
       { k: "Affiliation", v: "TUM · sebis" },
       { k: "Focus", v: "Medical NLP" },
-      { k: "Languages", v: "Python · PyTorch · Rust" },
+      { k: "Languages", v: "Python · LaTeX · Java" },
     ],
   },
   now: {
@@ -138,7 +138,7 @@ const en: I18nContent = {
     groups: [
       { name: "Research", items: ["Medical NLP", "Information Retrieval", "Synthetic Data", "Model Evaluation", "Topic Modeling"] },
       { name: "Models", items: ["Transformers", "LLM Distillation", "Quantization", "Graph Neural Nets", "Retrieval-Augmented Generation"] },
-      { name: "Stack", items: ["Python", "PyTorch", "Hugging Face", "FastAPI", "Docker", "Git"] },
+      { name: "Stack", items: ["Python", "Java", "LaTeX", "Hugging Face", "FastAPI", "Docker", "Git"] },
     ],
   },
   contact: {
@@ -185,7 +185,7 @@ const de: I18nContent = {
       { k: "Wohnort", v: "München" },
       { k: "Anbindung", v: "TUM · sebis" },
       { k: "Fokus", v: "Medical NLP" },
-      { k: "Sprachen", v: "Python · PyTorch · Rust" },
+      { k: "Sprachen", v: "Python · LaTeX · Java" },
     ],
   },
   now: {
@@ -240,7 +240,7 @@ const de: I18nContent = {
     groups: [
       { name: "Forschung", items: ["Medical NLP", "Information Retrieval", "Synthetische Daten", "Modellevaluation", "Topic Modeling"] },
       { name: "Modelle", items: ["Transformer", "LLM-Distillation", "Quantisierung", "Graph Neural Nets", "RAG"] },
-      { name: "Stack", items: ["Python", "PyTorch", "Hugging Face", "FastAPI", "Docker", "Git"] },
+      { name: "Stack", items: ["Python", "Java", "LaTeX", "Hugging Face", "FastAPI", "Docker", "Git"] },
     ],
   },
   contact: {
