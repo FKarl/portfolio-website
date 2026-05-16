@@ -3,10 +3,12 @@
 import * as React from "react"
 import { useI18n } from "@/lib/i18n-context"
 
+const PUB_COUNT_FALLBACK = 11
+
 function StatBar({ pubCount }: { pubCount: number | null }) {
   const { t } = useI18n()
   const stats = [
-    { v: pubCount !== null ? String(pubCount) : "—", k: t.stats.pubs, delta: t.stats.deltaPubs },
+    { v: String(pubCount ?? PUB_COUNT_FALLBACK), k: t.stats.pubs, delta: t.stats.deltaPubs },
     { v: "9", k: t.stats.years, delta: t.stats.deltaYears },
     { v: "1.2", k: t.stats.msc, delta: t.stats.deltaGrade },
     { v: "1.3", k: t.stats.bsc, delta: t.stats.deltaBsc },
