@@ -125,7 +125,7 @@ const en: I18nContent = {
     titleA: "Selected",
     titleB: "projects.",
     items: [
-      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "A robust ranking dataset for bibliographic web documents. Built to stress-test retrieval-augmented extraction across heterogeneous sources.", links: [{ label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "A robust ranking dataset for bibliographic web documents. Built to stress-test retrieval-augmented extraction across heterogeneous sources.", links: [{ label: "Paper", href: "https://irrj.org/article/view/23861/27682" }] },
       { title: "German Party Manifestos", tag: "NLP · Topic Modeling", body: "Semi-automatic analysis of major German party manifestos using LDA, HDP, and BERT. Interactive demo ranks summaries and scores positions.", image: "/assets/projects/tadl/p1.png", links: [{ label: "Demo", href: "https://www.tadl.fkarl.de/" }, { label: "Code", href: "https://github.com/FKarl/short-text-classification" }] },
       { title: "Efficient Inferencing", tag: "Small LMs", body: "Distillation, pruning, and quantization for academic-writing feedback. Benchmarked on server CPUs, laptops, and SoC devices.", image: "/assets/projects/eff_inference/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Efficient-Inferencing" }, { label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
       { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirical study of thirteen sampling strategies for Graph-MLP across six benchmarks. Sampling is a hyperparameter, not a default.", image: "/assets/projects/Graph-MLP/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Graph-MLP-Sampling" }] },
@@ -227,7 +227,7 @@ const de: I18nContent = {
     titleA: "Ausgewählte",
     titleB: "Projekte.",
     items: [
-      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "Ein robuster Ranking-Datensatz für bibliografische Web-Dokumente — gebaut, um Retrieval-augmentierte Extraktion über heterogene Quellen hinweg zu testen.", links: [{ label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
+      { title: "CRAWLDoc", tag: "Retrieval · LLM", body: "Ein robuster Ranking-Datensatz für bibliografische Web-Dokumente — gebaut, um Retrieval-augmentierte Extraktion über heterogene Quellen hinweg zu testen.", links: [{ label: "Paper", href: "https://irrj.org/article/view/23861/27682" }] },
       { title: "Deutsche Wahlprogramme", tag: "NLP · Topic Modeling", body: "Halbautomatische Analyse großer deutscher Wahlprogramme mit LDA, HDP und BERT. Interaktive Demo bewertet Zusammenfassungen.", image: "/assets/projects/tadl/p1.png", links: [{ label: "Demo", href: "https://www.tadl.fkarl.de/" }, { label: "Code", href: "https://github.com/FKarl/short-text-classification" }] },
       { title: "Effiziente Inferenz", tag: "Kleine Sprachmodelle", body: "Distillation, Pruning und Quantisierung für akademisches Schreibfeedback — gebenchmarkt auf Server-CPUs, Laptops und SoC-Geräten.", image: "/assets/projects/eff_inference/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Efficient-Inferencing" }, { label: "Paper", href: "https://arxiv.org/abs/2406.06947" }] },
       { title: "Graph-MLP Sampling", tag: "Graph ML", body: "Empirische Studie zu dreizehn Sampling-Strategien für Graph-MLP über sechs Benchmarks. Sampling ist ein Hyperparameter, kein Default.", image: "/assets/projects/Graph-MLP/p1.png", links: [{ label: "Code", href: "https://github.com/FKarl/Graph-MLP-Sampling" }] },
