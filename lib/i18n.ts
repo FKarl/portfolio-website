@@ -76,7 +76,7 @@ const en: I18nContent = {
     titleB: "me.",
     p1: "I am a Data Scientist and PhD candidate at the Technical University of Munich, where I research Medical NLP at the Chair of Software Engineering for Business Information Systems (sebis).",
     p2: "My work sits at the intersection of information retrieval, synthetic data generation, and model evaluation, building systems that read, reason, and recommend across messy real-world text.",
-    p3: "Nine years of programming, several first-author papers, one master's degree (1.2), and a stubborn belief that good engineering is what makes research useful.",
+    p3: "{years} years of programming, several first-author papers, one master's degree (1.2), and a stubborn belief that good engineering is what makes research useful.",
     pull: "Practical applications drive the necessity for better algorithms.",
     factsTitle: "Quick facts",
     facts: [
@@ -178,7 +178,7 @@ const de: I18nContent = {
     titleB: "mich.",
     p1: "Ich bin Data Scientist und Doktorand an der Technischen Universität München und forsche am Lehrstuhl sebis im Bereich Medical NLP.",
     p2: "Meine Arbeit liegt im Schnittfeld von Information Retrieval, synthetischer Datengenerierung und Modellevaluation, Systeme, die unstrukturierte Texte aus der echten Welt lesen, verarbeiten und empfehlen.",
-    p3: "Neun Jahre Programmiererfahrung, mehrere Erstautoren-Publikationen, ein Master mit 1,2 und die hartnäckige Überzeugung, dass gute Forschung gute Engineering-Praxis braucht.",
+    p3: "{years} Jahre Programmiererfahrung, mehrere Erstautoren-Publikationen, ein Master mit 1,2 und die hartnäckige Überzeugung, dass gute Forschung gute Engineering-Praxis braucht.",
     pull: "Praktische Anwendungen erzwingen bessere Algorithmen.",
     factsTitle: "Kurzprofil",
     facts: [

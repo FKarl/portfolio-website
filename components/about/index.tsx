@@ -1,9 +1,22 @@
 "use client"
 
 import { useI18n } from "@/lib/i18n-context"
+import type { Lang } from "@/lib/i18n"
+
+const CODING_START_YEAR = 2017
+
+const NUM_WORDS: Record<Lang, Record<number, string>> = {
+  en: { 1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine",10:"ten",11:"eleven",12:"twelve",13:"thirteen",14:"fourteen",15:"fifteen",16:"sixteen",17:"seventeen",18:"eighteen",19:"nineteen",20:"twenty" },
+  de: { 1:"ein",2:"zwei",3:"drei",4:"vier",5:"fünf",6:"sechs",7:"sieben",8:"acht",9:"neun",10:"zehn",11:"elf",12:"zwölf",13:"dreizehn",14:"vierzehn",15:"fünfzehn",16:"sechzehn",17:"siebzehn",18:"achtzehn",19:"neunzehn",20:"zwanzig" },
+}
+
+function yearsInWords(lang: Lang): string {
+  const n = new Date().getFullYear() - CODING_START_YEAR
+  return NUM_WORDS[lang][n] ?? String(n)
+}
 
 export function About() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
 
   return (
     <section id="about" className="section-pad">
@@ -23,7 +36,7 @@ export function About() {
           <div style={{ fontSize: 18.5, color: "var(--ink-2)", lineHeight: 1.6, maxWidth: "36rem" }}>
             <p style={{ margin: "0 0 18px" }}>{t.about.p1}</p>
             <p style={{ margin: "0 0 18px" }}>{t.about.p2}</p>
-            <p style={{ margin: 0 }}>{t.about.p3}</p>
+            <p style={{ margin: 0 }}>{t.about.p3.replace("{years}", yearsInWords(lang)).replace(/^\w/, c => c.toUpperCase())}</p>
           </div>
 
           {/* Fact card */}
