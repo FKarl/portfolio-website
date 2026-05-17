@@ -71,7 +71,7 @@ const en: I18nContent = {
   },
   status: "Open to collab",
   about: {
-    kicker: "01 · About",
+    kicker: "01 — About",
     titleA: "About",
     titleB: "me.",
     p1: "I am a Data Scientist and PhD candidate at the Technical University of Munich, where I research Medical NLP at the Chair of Software Engineering for Business Information Systems (sebis).",
@@ -96,7 +96,7 @@ const en: I18nContent = {
     ],
   },
   timeline: {
-    kicker: "02 · Academic journey",
+    kicker: "02 — Academic journey",
     titleA: "Academic",
     titleB: "timeline.",
     items: [
@@ -108,7 +108,7 @@ const en: I18nContent = {
     ],
   },
   publications: {
-    kicker: "03 · Peer-reviewed & preprints",
+    kicker: "03 — Peer-reviewed & preprints",
     titleA: "Selected",
     titleB: "publications.",
     subtitle: "Synchronized live with DBLP, supplemented with manually curated entries.",
@@ -121,7 +121,7 @@ const en: I18nContent = {
     showLess: "Show less",
   },
   projects: {
-    kicker: "04 · Selected work",
+    kicker: "04 — Selected work",
     titleA: "Selected",
     titleB: "projects.",
     items: [
@@ -132,7 +132,7 @@ const en: I18nContent = {
     ],
   },
   skills: {
-    kicker: "05 · Toolbox",
+    kicker: "05 — Toolbox",
     titleA: "The",
     titleB: "toolbox.",
     groups: [
@@ -142,7 +142,7 @@ const en: I18nContent = {
     ],
   },
   contact: {
-    kicker: "06 · Get in touch",
+    kicker: "06 — Get in touch",
     titleA: "Let's",
     titleB: "talk.",
     body: "Open to collaborations on medical NLP, retrieval, and small-LM evaluation. Best reached by email. I read everything.",
@@ -173,7 +173,7 @@ const de: I18nContent = {
   },
   status: "Offen für Kollaboration",
   about: {
-    kicker: "01 · Über mich",
+    kicker: "01 — Über mich",
     titleA: "Über",
     titleB: "mich.",
     p1: "Ich bin Data Scientist und Doktorand an der Technischen Universität München und forsche am Lehrstuhl sebis im Bereich Medical NLP.",
@@ -198,7 +198,7 @@ const de: I18nContent = {
     ],
   },
   timeline: {
-    kicker: "02 · Akademischer Werdegang",
+    kicker: "02 — Akademischer Werdegang",
     titleA: "Akademischer",
     titleB: "Werdegang.",
     items: [
@@ -210,7 +210,7 @@ const de: I18nContent = {
     ],
   },
   publications: {
-    kicker: "03 · Peer-Review & Preprints",
+    kicker: "03 — Peer-Review & Preprints",
     titleA: "Ausgewählte",
     titleB: "Publikationen.",
     subtitle: "Live aus DBLP synchronisiert, ergänzt um manuell gepflegte Einträge.",
@@ -223,7 +223,7 @@ const de: I18nContent = {
     showLess: "Weniger anzeigen",
   },
   projects: {
-    kicker: "04 · Ausgewählte Arbeiten",
+    kicker: "04 — Ausgewählte Arbeiten",
     titleA: "Ausgewählte",
     titleB: "Projekte.",
     items: [
@@ -234,7 +234,7 @@ const de: I18nContent = {
     ],
   },
   skills: {
-    kicker: "05 · Werkzeugkasten",
+    kicker: "05 — Werkzeugkasten",
     titleA: "Der",
     titleB: "Werkzeugkasten.",
     groups: [
@@ -244,7 +244,7 @@ const de: I18nContent = {
     ],
   },
   contact: {
-    kicker: "07 · Schreib mir",
+    kicker: "07 — Schreib mir",
     titleA: "Schreib",
     titleB: "mir.",
     body: "Offen für Zusammenarbeit zu Medical NLP, Retrieval und Evaluation kleiner Sprachmodelle. Am besten per E-Mail, ich lese alles.",
