@@ -2,13 +2,12 @@
 
 import * as React from "react"
 import { useI18n } from "@/lib/i18n-context"
-
-const PUB_COUNT_FALLBACK = 11
+import { loadPubs } from "@/components/publications"
 
 function StatBar({ pubCount }: { pubCount: number | null }) {
   const { t } = useI18n()
   const stats = [
-    { v: String(pubCount ?? PUB_COUNT_FALLBACK), k: t.stats.pubs, delta: t.stats.deltaPubs },
+    { v: pubCount !== null ? String(pubCount) : "—", k: t.stats.pubs, delta: t.stats.deltaPubs },
     { v: "9", k: t.stats.years, delta: t.stats.deltaYears },
     { v: "1.2", k: t.stats.msc, delta: t.stats.deltaGrade },
     { v: "1.3", k: t.stats.bsc, delta: t.stats.deltaBsc },
@@ -41,10 +40,7 @@ export function Header() {
   const [pubCount, setPubCount] = React.useState<number | null>(null)
 
   React.useEffect(() => {
-    fetch("https://dblp.org/pid/239/6427-1.xml", { headers: { Accept: "application/xml" } })
-      .then(r => r.text())
-      .then(text => { const m = text.match(/<r\b/g); if (m) setPubCount(m.length) })
-      .catch(() => {})
+    loadPubs().then(res => setPubCount(res.pubs.length)).catch(() => {})
   }, [])
 
   return (

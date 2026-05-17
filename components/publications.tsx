@@ -84,7 +84,7 @@ function parseDblpXml(text: string): Pub[] {
   return out
 }
 
-async function loadPubs(): Promise<{ source: "dblp" | "fallback"; pubs: Pub[] }> {
+export async function loadPubs(): Promise<{ source: "dblp" | "fallback"; pubs: Pub[] }> {
   try {
     const res = await fetch("https://dblp.org/pid/239/6427-1.xml", { headers: { Accept: "application/xml" } })
     if (!res.ok) throw new Error(`${res.status}`)
