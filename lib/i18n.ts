@@ -90,9 +90,9 @@ const en: I18nContent = {
     kicker: "Current focus",
     title: "Now.",
     items: [
-      { statusLabel: "Building", title: "Retrieval-augmented bibliographic extraction", body: "Extending CRAWLDoc with stronger reranking and cross-source linking.", tag: "CRAWLDoc · IR" },
-      { statusLabel: "Researching", title: "Synthetic-data pipelines for clinical text", body: "Generating, filtering, and grounding training data for clinical document understanding.", tag: "Synthetic · Clinical" },
-      { statusLabel: "Drafting", title: "Evaluation harnesses for small, domain-tuned LMs", body: "Benchmarks that compare distilled and quantized variants under realistic latency budgets.", tag: "Small LMs · Eval" },
+      { statusLabel: "Building", title: "Synthetic data pipelines", body: "Generating, filtering, and grounding training data for clinical and scientific NLP tasks.", tag: "Synthetic Data · Clinical" },
+      { statusLabel: "Researching", title: "Domain adaptation of LLMs", body: "Adapting large language models to the medical domain through targeted fine-tuning and evaluation.", tag: "Medical NLP · LLMs" },
+      { statusLabel: "Exploring", title: "Information retrieval and RAG", body: "Building and benchmarking retrieval-augmented generation pipelines for knowledge-intensive tasks.", tag: "IR · RAG" },
     ],
   },
   timeline: {
@@ -192,9 +192,9 @@ const de: I18nContent = {
     kicker: "Worauf ich gerade fokussiere",
     title: "Aktuell.",
     items: [
-      { statusLabel: "Im Bau", title: "Retrieval-augmentierte bibliografische Extraktion", body: "Erweiterung von CRAWLDoc mit stärkerem Reranking und Cross-Source-Linking.", tag: "CRAWLDoc · IR" },
-      { statusLabel: "Forschung", title: "Synthetische-Daten-Pipelines für klinischen Text", body: "Generierung, Filterung und Grounding von Trainingsdaten für klinisches Textverständnis.", tag: "Synthetisch · Klinisch" },
-      { statusLabel: "Schreiben", title: "Evaluation kleiner, domänenspezifischer Sprachmodelle", body: "Benchmarks für distillierte und quantisierte Varianten unter realistischen Latenz-Budgets.", tag: "Kleine Sprachmodelle" },
+      { statusLabel: "Im Aufbau", title: "Synthetische Datenpipelines", body: "Generierung, Filterung und Grounding von Trainingsdaten für klinische und wissenschaftliche NLP-Aufgaben.", tag: "Synthetische Daten · Klinisch" },
+      { statusLabel: "Forschung", title: "Domänenadaption von LLMs", body: "Anpassung großer Sprachmodelle an die medizinische Domäne durch gezieltes Fine-Tuning und Evaluation.", tag: "Medical NLP · LLMs" },
+      { statusLabel: "Erkundung", title: "Information Retrieval und RAG", body: "Aufbau und Benchmarking von Retrieval-augmented Generation Pipelines für wissensintensive Aufgaben.", tag: "IR · RAG" },
     ],
   },
   timeline: {
