@@ -145,7 +145,7 @@ const en: I18nContent = {
     kicker: "06 — Get in touch",
     titleA: "Let's",
     titleB: "talk.",
-    body: "Open to collaborations on medical NLP, retrieval, and small-LM evaluation. Best reached by email. I read everything.",
+    body: "Open to connect. Best reached by email.",
     channels: [
       { label: "Email", value: "fabian.karl@tum.de", href: "mailto:fabian.karl@tum.de" },
       { label: "GitHub", value: "FKarl", href: "https://github.com/FKarl" },
@@ -247,7 +247,7 @@ const de: I18nContent = {
     kicker: "07 — Schreib mir",
     titleA: "Schreib",
     titleB: "mir.",
-    body: "Offen für Zusammenarbeit zu Medical NLP, Retrieval und Evaluation kleiner Sprachmodelle. Am besten per E-Mail, ich lese alles.",
+    body: "Offen für Kontakt. Am besten per E-Mail.",
     channels: [
       { label: "E-Mail", value: "fabian.karl@tum.de", href: "mailto:fabian.karl@tum.de" },
       { label: "GitHub", value: "FKarl", href: "https://github.com/FKarl" },
