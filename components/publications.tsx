@@ -16,6 +16,13 @@ interface Pub {
 
 const FALLBACK: Pub[] = [
   {
+    key: "karl2025hydra",
+    title: "HYDRA: A Multi-Head Encoder-only Architecture for Hierarchical Text Classification",
+    authors: ["Fabian Karl", "Ansgar Scherp"],
+    venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    year: 2025, type: "conference", url: "https://doi.org/10.18653/v1/2025.emnlp-main.472", tags: ["NLP", "Text Classification"],
+  },
+  {
     key: "karl2024crawldoc",
     title: "CRAWLDoc: A Dataset for Robust Ranking of Bibliographic Documents",
     authors: ["Fabian Karl", "Ansgar Scherp"],
@@ -35,20 +42,6 @@ const FALLBACK: Pub[] = [
     authors: ["Andor Diera", "Abdelhalim Dahou", "Lukas Galke", "Fabian Karl", "Florian Sihler", "Ansgar Scherp"],
     venue: "Association for Computational Linguistics",
     year: 2023, type: "workshop", url: "https://aclanthology.org/2023.genbench-1.2/", tags: ["NLP", "Generalization"],
-  },
-  {
-    key: "karl2023efficient",
-    title: "Efficient Inferencing in Language Models for Academic Writing Feedback",
-    authors: ["Fabian Karl", "et al."],
-    venue: "Workshop on Resource-Efficient NLP",
-    year: 2024, type: "workshop", url: "#", tags: ["NLP", "Efficiency"],
-  },
-  {
-    key: "karl2023graphmlp",
-    title: "Graph-MLP Sampling: An Empirical Study of Sampling Strategies",
-    authors: ["Fabian Karl"],
-    venue: "Technical Report, Ulm University",
-    year: 2023, type: "conference", url: "https://github.com/FKarl/Graph-MLP-Sampling", tags: ["Graph ML"],
   },
 ]
 
