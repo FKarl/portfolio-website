@@ -144,7 +144,12 @@
 .filter[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--bg); font-weight: 600; }
 .year-group { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px 40px; padding-block: 32px; border-top: 1px solid var(--rule); }
 .year-group:first-child { border-top: 2px solid var(--ink); }
-.year-group:last-child { border-bottom: 1px solid var(--rule); }
+.pub-list { border-bottom: 1px solid var(--rule); }
+.year-group[hidden], .pub[hidden] { display: none; }
+.more-row { appearance: none; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; border: 0; border-top: 1px solid var(--rule); background: transparent; color: var(--ink); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.more-row:hover { color: var(--accent); }
+.more-chevron { flex: 0 0 auto; transition: transform .2s ease; }
+.more-row[aria-expanded="true"] .more-chevron { transform: rotate(180deg); }
 .year { font-size: 44px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; margin: 0; }
 .year-pubs { display: flex; flex-direction: column; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .pub + .pub { padding-top: 28px; border-top: 1px solid var(--rule-2); }
