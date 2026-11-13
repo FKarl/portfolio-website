@@ -111,11 +111,10 @@
 .research { display: flex; flex-direction: column; gap: 64px; }
 .aidapt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px 80px; }
 .aidapt-text { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-.kicker-row { display: flex; align-items: center; gap: 12px; }
-.aidapt-icon { flex: 0 0 auto; width: 34px; height: auto; display: block; }
+.aidapt-icon { display: inline-block; height: 0.95em; width: auto; margin-right: 0.28em; vertical-align: -0.1em; }
 .only-dark { display: none; }
 :root[data-theme="dark"] .only-light { display: none; }
-:root[data-theme="dark"] .only-dark { display: block; }
+:root[data-theme="dark"] .only-dark { display: inline-block; }
 .kicker { margin: 0; font-weight: 600; color: var(--accent); }
 .lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; }
 .facts { margin: 0; align-self: end; }
