@@ -128,7 +128,7 @@ export function Publications() {
     <section id="publications" className="wrap section pubs">
       <div className="pubs-head">
         <div>
-          <h2 className="h2">{p.title}</h2>
+          <h2 className="h2">{p.title} <span className="pub-count" aria-label={p.total.replace("{total}", String(pubs.length))}>{pubs.length}</span></h2>
           <p className="pubs-status" aria-live="polite">
             <span className={`dot${source === "fallback" ? " off" : ""}`} aria-hidden="true" />
             {source !== "fallback" && <span>{p.subtitleA} {dblpLink}{p.subtitleB}</span>}
@@ -180,18 +180,23 @@ export function Publications() {
           </div>
         ))}
         {hiddenCount > 0 && (
-          <button
-            type="button"
-            className="more-row"
-            aria-expanded={expanded}
-            onClick={() => {
-              if (expanded) document.getElementById("publications")?.scrollIntoView({ block: "start" })
-              setExpanded(v => !v)
-            }}
-          >
-            <span>{expanded ? p.showLess : p.showMore.replace("{n}", String(hiddenCount))}</span>
-            <ChevronDown size={22} aria-hidden="true" className="more-chevron" />
-          </button>
+          <div className="more-row">
+            <span className="more-count">
+              {p.showing.replace("{shown}", String(expanded ? filtered.length : PUB_LIMIT)).replace("{total}", String(filtered.length))}
+            </span>
+            <button
+              type="button"
+              className="btn more-btn"
+              aria-expanded={expanded}
+              onClick={() => {
+                if (expanded) document.getElementById("publications")?.scrollIntoView({ block: "start" })
+                setExpanded(v => !v)
+              }}
+            >
+              <span>{expanded ? p.showLess : p.showMore.replace("{total}", String(filtered.length))}</span>
+              <ChevronDown size={20} aria-hidden="true" className="more-chevron" />
+            </button>
+          </div>
         )}
       </div>
     </section>

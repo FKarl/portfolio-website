@@ -146,10 +146,12 @@
 .year-group:first-child { border-top: 2px solid var(--ink); }
 .pub-list { border-bottom: 1px solid var(--rule); }
 .year-group[hidden], .pub[hidden] { display: none; }
-.more-row { appearance: none; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; border: 0; border-top: 1px solid var(--rule); background: transparent; color: var(--ink); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
-.more-row:hover { color: var(--accent); }
+.more-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; padding: 28px 0; border-top: 1px solid var(--rule); }
+.more-count { color: var(--ink-2); font-weight: 600; }
+.more-btn { appearance: none; border: 0; font: inherit; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
+.pub-count { display: inline-block; font-size: 0.42em; font-weight: 600; letter-spacing: 0; color: var(--accent); background: var(--accent-soft); padding: 0.3em 0.7em; border-radius: 999px; vertical-align: 0.55em; margin-left: 0.25em; }
 .more-chevron { flex: 0 0 auto; transition: transform .2s ease; }
-.more-row[aria-expanded="true"] .more-chevron { transform: rotate(180deg); }
+.more-btn[aria-expanded="true"] .more-chevron { transform: rotate(180deg); }
 .year { font-size: 44px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; margin: 0; }
 .year-pubs { display: flex; flex-direction: column; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .pub + .pub { padding-top: 28px; border-top: 1px solid var(--rule-2); }
