@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { ChevronDown } from "lucide-react"
 import { useI18n } from "@/lib/i18n-context"
 import { LINKS } from "@/lib/i18n"
 import snapshot from "@/lib/dblp-snapshot.json"
@@ -89,7 +90,8 @@ export async function loadPubs(): Promise<Pub[] | null> {
   }
 }
 
-const PUB_LIMIT = 10
+// How many of the most recent publications show before "show more".
+const PUB_LIMIT = 5
 const FILTER_ORDER = ["all", "conference", "journal", "workshop", "preprint", "thesis"]
 
 export function Publications() {
@@ -107,14 +109,17 @@ export function Publications() {
   }, [])
 
   const filtered = filter === "all" ? pubs : pubs.filter(x => x.type === filter)
-  const visible = expanded ? filtered : filtered.slice(0, PUB_LIMIT)
   const availableFilters = FILTER_ORDER.filter(k => k === "all" || pubs.some(x => x.type === k))
+  const hiddenCount = Math.max(0, filtered.length - PUB_LIMIT)
 
-  const groups: Array<{ year: number | null; items: Pub[] }> = []
-  visible.forEach(pub => {
+  // Every publication stays in the HTML (for search engines); the ones past
+  // the limit are only hidden until the list is expanded.
+  const groups: Array<{ year: number | null; items: Array<{ pub: Pub; hidden: boolean }> }> = []
+  filtered.forEach((pub, i) => {
+    const item = { pub, hidden: !expanded && i >= PUB_LIMIT }
     const last = groups[groups.length - 1]
-    if (last && last.year === pub.year) last.items.push(pub)
-    else groups.push({ year: pub.year, items: [pub] })
+    if (last && last.year === pub.year) last.items.push(item)
+    else groups.push({ year: pub.year, items: [item] })
   })
 
   const dblpLink = <a href={LINKS.dblp} target="_blank" rel="noopener">DBLP</a>
@@ -123,7 +128,7 @@ export function Publications() {
     <section id="publications" className="wrap section pubs">
       <div className="pubs-head">
         <div>
-          <h2 className="h2">{p.title}</h2>
+          <h2 className="h2">{p.title} <span className="pub-count" aria-label={p.total.replace("{total}", String(pubs.length))}>{pubs.length}</span></h2>
           <p className="pubs-status" aria-live="polite">
             <span className={`dot${source === "fallback" ? " off" : ""}`} aria-hidden="true" />
             {source !== "fallback" && <span>{p.subtitleA} {dblpLink}{p.subtitleB}</span>}
@@ -147,14 +152,14 @@ export function Publications() {
         )}
       </div>
 
-      <div>
-        {visible.length === 0 && <p className="muted">{p.empty}</p>}
+      <div className="pub-list">
+        {filtered.length === 0 && <p className="muted">{p.empty}</p>}
         {groups.map(g => (
-          <div className="year-group" key={g.year ?? "undated"}>
+          <div className="year-group" key={g.year ?? "undated"} hidden={g.items.every(it => it.hidden)}>
             <h3 className="year">{g.year ?? p.undated}</h3>
             <ul className="year-pubs">
-              {g.items.map(pub => (
-                <li className="pub" key={pub.key}>
+              {g.items.map(({ pub, hidden }) => (
+                <li className="pub" key={pub.key} hidden={hidden}>
                   <div className="pub-main">
                     <h4>{pub.title}</h4>
                     <p className="pub-authors">{fmtAuthors(pub.authors)}</p>
@@ -174,23 +179,26 @@ export function Publications() {
             </ul>
           </div>
         ))}
+        {hiddenCount > 0 && (
+          <div className="more-row">
+            <span className="more-count">
+              {p.showing.replace("{shown}", String(expanded ? filtered.length : PUB_LIMIT)).replace("{total}", String(filtered.length))}
+            </span>
+            <button
+              type="button"
+              className="btn-outline more-btn"
+              aria-expanded={expanded}
+              onClick={() => {
+                if (expanded) document.getElementById("publications")?.scrollIntoView({ block: "start" })
+                setExpanded(v => !v)
+              }}
+            >
+              <span>{expanded ? p.showLess : p.showMore.replace("{total}", String(filtered.length))}</span>
+              <ChevronDown size={20} aria-hidden="true" className="more-chevron" />
+            </button>
+          </div>
+        )}
       </div>
-
-      {filtered.length > PUB_LIMIT && (
-        <div>
-          <button
-            type="button"
-            className="btn-outline"
-            aria-expanded={expanded}
-            onClick={() => {
-              if (expanded) document.getElementById("publications")?.scrollIntoView({ block: "start" })
-              setExpanded(v => !v)
-            }}
-          >
-            {expanded ? p.showLess : `${p.showMore} (${filtered.length})`}
-          </button>
-        </div>
-      )}
     </section>
   )
 }

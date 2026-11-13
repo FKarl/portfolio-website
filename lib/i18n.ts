@@ -46,6 +46,8 @@ export interface I18nContent {
     paper: string
     bibtex: string
     showMore: string
+    showing: string
+    total: string
     showLess: string
     undated: string
   }
@@ -93,7 +95,9 @@ const en: I18nContent = {
     types: { conference: "Conference", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Thesis", article: "Article" },
     paper: "Paper",
     bibtex: "BibTeX",
-    showMore: "Show all publications",
+    showMore: "Show all {total} publications",
+    showing: "Showing {shown} of {total}",
+    total: "{total} publications in total",
     showLess: "Show fewer",
     undated: "n.d.",
   },
@@ -160,7 +164,9 @@ const de: I18nContent = {
     types: { conference: "Konferenz", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Abschlussarbeit", article: "Artikel" },
     paper: "Paper",
     bibtex: "BibTeX",
-    showMore: "Alle Publikationen anzeigen",
+    showMore: "Alle {total} Publikationen anzeigen",
+    showing: "{shown} von {total} angezeigt",
+    total: "Insgesamt {total} Publikationen",
     showLess: "Weniger anzeigen",
     undated: "o. J.",
   },
