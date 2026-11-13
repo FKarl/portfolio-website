@@ -4,13 +4,13 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Fabian Karl - Data Scientist & ML Engineer',
+    name: 'Fabian Karl, NLP Researcher',
     short_name: 'Fabian Karl',
-    description: 'Data Scientist and PhD Student at TUM specializing in Medical NLP, Information Retrieval, and Machine Learning research.',
+    description: 'PhD researcher at TU Munich working on synthetic data, retrieval and evaluation for expert domains.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#3b82f6',
+    theme_color: '#0b6349',
     icons: [
       {
         src: '/favicon.ico',
