@@ -111,6 +111,10 @@
 .research { display: flex; flex-direction: column; gap: 64px; }
 .aidapt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px 80px; }
 .aidapt-text { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+.aidapt-icon { width: 58px; height: auto; display: block; margin-bottom: 4px; }
+.only-dark { display: none; }
+:root[data-theme="dark"] .only-light { display: none; }
+:root[data-theme="dark"] .only-dark { display: block; }
 .kicker { margin: 0; font-weight: 600; color: var(--accent); }
 .lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; }
 .facts { margin: 0; align-self: end; }

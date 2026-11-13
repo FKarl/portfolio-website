@@ -12,6 +12,10 @@ export function Research() {
       <div className="wrap section research">
         <div className="aidapt">
           <div className="aidapt-text">
+            {/* eslint-disable @next/next/no-img-element */}
+            <img className="aidapt-icon only-light" src="/assets/aidapt/aidapt-icon.svg" alt="" width={66} height={64} />
+            <img className="aidapt-icon only-dark" src="/assets/aidapt/aidapt-icon-dark.svg" alt="" width={66} height={64} />
+            {/* eslint-enable @next/next/no-img-element */}
             <p className="kicker">{r.kicker}</p>
             <h2 className="h2">{r.title}</h2>
             <p className="lead">{r.lead}</p>
