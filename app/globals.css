@@ -153,7 +153,6 @@
 .pub-links a { padding-block: 10px; }
 .badge { flex: 0 0 auto; font-size: 14px; font-weight: 600; color: var(--ink-2); background: var(--neutral-soft); padding: 6px 12px; border-radius: 6px; }
 .badge.accent { color: var(--accent); background: var(--accent-soft); }
-.skeleton { height: 96px; border-radius: var(--r); background: var(--tint); }
 @media (max-width: 720px) {
   .year-group { grid-template-columns: minmax(0, 1fr); padding-block: 24px; }
   .year { font-size: 32px; }

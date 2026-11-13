@@ -1,0 +1,315 @@
+{
+  "fetchedAt": "2026-11-13",
+  "bindings": [
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/corr/abs-2603-13962"
+      },
+      "title": {
+        "type": "literal",
+        "value": "sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2026"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CoRR"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.48550/ARXIV.2603.13962"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "1:Ibrahim Ebrar Yurt|2:Fabian Karl 0001|3:Tejaswi Choppa|4:Florian Matthes"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/irrj/KarlS26"
+      },
+      "title": {
+        "type": "literal",
+        "value": "CRAWLDoc: A System for Contextual Ranking and Bibliographic Metadata Extraction from Web Resources."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2026"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "Inf. Retr. Res. J."
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.54195/IRRJ.23861"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "2:Ansgar Scherp|1:Fabian Karl 0001"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/conf/emnlp/KarlS25"
+      },
+      "title": {
+        "type": "literal",
+        "value": "HYDRA: A Multi-Head Encoder-only Architecture for Hierarchical Text Classification."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2025"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Inproceedings"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "EMNLP"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.18653/V1/2025.EMNLP-MAIN.472"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "2:Ansgar Scherp|1:Fabian Karl 0001"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/conf/icnlsp/DieraG0S25"
+      },
+      "title": {
+        "type": "literal",
+        "value": "Efficient Continual Learning for Small Language Models with a Discrete Key-Value Bottleneck."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2025"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Inproceedings"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "ICNLSP"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://aclanthology.org/2025.icnlsp-1.17/"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "2:Lukas Galke|3:Fabian Karl 0001|4:Ansgar Scherp|1:Andor Diera"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/conf/scolia/KarlS25"
+      },
+      "title": {
+        "type": "literal",
+        "value": "CRAWLDoc: A Dataset for Robust Ranking of Bibliographic Documents."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2025"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Inproceedings"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "SCOLIA"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://ceur-ws.org/Vol-4022/paper-04.pdf"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "2:Ansgar Scherp|1:Fabian Karl 0001"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/corr/abs-2506-03822"
+      },
+      "title": {
+        "type": "literal",
+        "value": "CRAWLDoc: A Dataset for Robust Ranking of Bibliographic Documents."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2025"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CoRR"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.48550/ARXIV.2506.03822"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "1:Fabian Karl 0001|2:Ansgar Scherp"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/corr/abs-2412-08528"
+      },
+      "title": {
+        "type": "literal",
+        "value": "Continual Learning for Encoder-only Language Models via a Discrete Key-Value Bottleneck."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2024"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CoRR"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.48550/ARXIV.2412.08528"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "4:Ansgar Scherp|3:Fabian Karl 0001|2:Lukas Galke|1:Andor Diera"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/conf/cdmake/KarlS23"
+      },
+      "title": {
+        "type": "literal",
+        "value": "Transformers are Short-Text Classifiers."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2023"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Inproceedings"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CD-MAKE"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.1007/978-3-031-40837-3_7"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "1:Fabian Karl 0001|2:Ansgar Scherp"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/corr/abs-2311-09707"
+      },
+      "title": {
+        "type": "literal",
+        "value": "GenCodeSearchNet: A Benchmark Test Suite for Evaluating Generalization in Programming Language Understanding."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2023"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CoRR"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.48550/ARXIV.2311.09707"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "6:Ansgar Scherp|5:Florian Sihler|4:Fabian Karl 0001|3:Lukas Galke|2:Abdelhalim Hafedh Dahou|1:Andor Diera"
+      }
+    },
+    {
+      "pub": {
+        "type": "uri",
+        "value": "https://dblp.org/rec/journals/corr/abs-2211-16878"
+      },
+      "title": {
+        "type": "literal",
+        "value": "Transformers are Short Text Classifiers: A Study of Inductive Short Text Classifiers on Benchmarks and Real-world Datasets."
+      },
+      "year": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+        "type": "literal",
+        "value": "2022"
+      },
+      "type": {
+        "type": "uri",
+        "value": "http://purl.org/net/nknouf/ns/bibtex#Article"
+      },
+      "venue": {
+        "type": "literal",
+        "value": "CoRR"
+      },
+      "ee": {
+        "type": "uri",
+        "value": "https://doi.org/10.48550/ARXIV.2211.16878"
+      },
+      "authors": {
+        "type": "literal",
+        "value": "1:Fabian Karl 0001|2:Ansgar Scherp"
+      }
+    }
+  ]
+}

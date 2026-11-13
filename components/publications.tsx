@@ -3,6 +3,7 @@
 import * as React from "react"
 import { useI18n } from "@/lib/i18n-context"
 import { LINKS } from "@/lib/i18n"
+import snapshot from "@/lib/dblp-snapshot.json"
 
 interface Pub {
   key: string
@@ -16,36 +17,8 @@ interface Pub {
   dblpKey?: string
 }
 
-const FALLBACK: Pub[] = [
-  {
-    key: "karl2025hydra",
-    title: "HYDRA: A Multi-Head Encoder-only Architecture for Hierarchical Text Classification",
-    authors: ["Fabian Karl", "Ansgar Scherp"],
-    venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-    year: 2025, type: "conference", url: "https://doi.org/10.18653/v1/2025.emnlp-main.472",
-  },
-  {
-    key: "karl2024crawldoc",
-    title: "CRAWLDoc: A Dataset for Robust Ranking of Bibliographic Documents",
-    authors: ["Fabian Karl", "Ansgar Scherp"],
-    venue: "arXiv preprint",
-    year: 2024, type: "preprint", url: "https://arxiv.org/abs/2406.06947",
-  },
-  {
-    key: "karl2024transformers",
-    title: "Transformers are Short-Text Classifiers: A Study of Inductive Short-Text Classifiers on Benchmarks and Real-World Datasets",
-    authors: ["Fabian Karl", "Ansgar Scherp"],
-    venue: "International Conference on Natural Language and Speech Processing (ICNLSP)",
-    year: 2023, type: "conference", url: "https://aclanthology.org/2023.icnlsp-1.16/",
-  },
-  {
-    key: "gencodeSearchNet",
-    title: "GenCodeSearchNet: A Benchmark Test Suite for Evaluating Generalization in Programming Language Understanding",
-    authors: ["Andor Diera", "Abdelhalim Dahou", "Lukas Galke", "Fabian Karl", "Florian Sihler", "Ansgar Scherp"],
-    venue: "Association for Computational Linguistics",
-    year: 2023, type: "workshop", url: "https://aclanthology.org/2023.genbench-1.2/",
-  },
-]
+// Manually curated entries, added when DBLP does not list a paper yet.
+const MANUAL: Pub[] = []
 
 // DBLP's page and XML exports sit behind a bot check that blocks scripted
 // requests, so the list comes from DBLP's public SPARQL endpoint instead.
@@ -91,37 +64,46 @@ function parseDblpSparql(bindings: Binding[]): Pub[] {
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "")
 const byYearDesc = (a: Pub, b: Pub) => (b.year ?? 0) - (a.year ?? 0) || Number(a.type === "preprint") - Number(b.type === "preprint")
 
-export async function loadPubs(): Promise<{ source: "dblp" | "fallback"; pubs: Pub[] }> {
+function buildList(all: Pub[]): Pub[] {
+  // Hide a preprint when the same title also exists as a published version.
+  const published = new Set(all.filter(p => p.type !== "preprint").map(p => norm(p.title)))
+  const list = all.filter(p => p.type !== "preprint" || !published.has(norm(p.title)))
+  const seen = new Set(all.map(p => norm(p.title)))
+  MANUAL.forEach(p => { if (!seen.has(norm(p.title))) list.push(p) })
+  return list.sort(byYearDesc)
+}
+
+// Baked in at build time by scripts/update-dblp-snapshot.mjs, so the list is
+// part of the static HTML and still shows when the live query fails.
+const SNAPSHOT: Pub[] = buildList(parseDblpSparql(snapshot.bindings as Binding[]))
+
+export async function loadPubs(): Promise<Pub[] | null> {
   try {
     const res = await fetch(`${SPARQL_ENDPOINT}?query=${encodeURIComponent(SPARQL_QUERY)}`, { headers: { Accept: "application/sparql-results+json" } })
     if (!res.ok) throw new Error(`${res.status}`)
     const all = parseDblpSparql((await res.json()).results.bindings)
     if (!all.length) throw new Error("empty")
-    // Hide a preprint when the same title also exists as a published version.
-    const published = new Set(all.filter(p => p.type !== "preprint").map(p => norm(p.title)))
-    const dblp = all.filter(p => p.type !== "preprint" || !published.has(norm(p.title)))
-    // Add manually curated entries that DBLP does not list yet.
-    const seen = new Set(all.map(p => norm(p.title)))
-    FALLBACK.forEach(p => { if (!seen.has(norm(p.title))) dblp.push(p) })
-    return { source: "dblp", pubs: dblp.sort(byYearDesc) }
+    return buildList(all)
   } catch {
-    return { source: "fallback", pubs: FALLBACK.slice().sort(byYearDesc) }
+    return null
   }
 }
 
-const PUB_LIMIT = 6
+const PUB_LIMIT = 10
 const FILTER_ORDER = ["all", "conference", "journal", "workshop", "preprint", "thesis"]
 
 export function Publications() {
   const { t } = useI18n()
   const p = t.publications
-  const [pubs, setPubs] = React.useState<Pub[]>([])
+  const [pubs, setPubs] = React.useState<Pub[]>(SNAPSHOT)
   const [source, setSource] = React.useState<"loading" | "dblp" | "fallback">("loading")
   const [filter, setFilter] = React.useState("all")
   const [expanded, setExpanded] = React.useState(false)
 
   React.useEffect(() => {
-    loadPubs().then(res => { setSource(res.source); setPubs(res.pubs) })
+    loadPubs().then(live => {
+      if (live) { setPubs(live); setSource("dblp") } else setSource("fallback")
+    })
   }, [])
 
   const filtered = filter === "all" ? pubs : pubs.filter(x => x.type === filter)
@@ -143,9 +125,8 @@ export function Publications() {
         <div>
           <h2 className="h2">{p.title}</h2>
           <p className="pubs-status" aria-live="polite">
-            <span className={`dot${source === "dblp" ? "" : " off"}`} aria-hidden="true" />
-            {source === "loading" && <span>{p.loading}</span>}
-            {source === "dblp" && <span>{p.subtitleA} {dblpLink}{p.subtitleB}</span>}
+            <span className={`dot${source === "fallback" ? " off" : ""}`} aria-hidden="true" />
+            {source !== "fallback" && <span>{p.subtitleA} {dblpLink}{p.subtitleB}</span>}
             {source === "fallback" && <span>{p.sourceFallback} {dblpLink}.</span>}
           </p>
         </div>
@@ -167,10 +148,7 @@ export function Publications() {
       </div>
 
       <div>
-        {source === "loading" && [1, 2, 3].map(i => (
-          <div className="year-group" key={i}><div /><div className="skeleton" /></div>
-        ))}
-        {source !== "loading" && visible.length === 0 && <p className="muted">{p.empty}</p>}
+        {visible.length === 0 && <p className="muted">{p.empty}</p>}
         {groups.map(g => (
           <div className="year-group" key={g.year ?? "undated"}>
             <h3 className="year">{g.year ?? p.undated}</h3>
