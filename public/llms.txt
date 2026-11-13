@@ -1,0 +1,52 @@
+# Fabian Karl
+
+> Fabian Karl is a PhD researcher in natural language processing at the Technical University of Munich (TUM), at the sebis chair of Prof. Dr. Florian Matthes. He makes language models work in expert domains where training data is scarce, private or expensive, with a focus on synthetic data generation, information retrieval and model evaluation for medical and other specialized text.
+
+This is his personal research website, https://www.fkarl.de. It is available in English and German.
+
+## Current project
+
+- [AIdapt](https://www.cs.cit.tum.de/sebis/research/natural-language-processing/adapting-ai-models-to-specialized-domains-via-grounded-synthetic-data-generation-aidapt/): Adapting AI Models to Specialized Domains via Grounded Synthetic Data Generation. Fabian Karl leads this project within the Software Campus Leadership Accelerator, with DATEV eG as industry partner and funding from the German Federal Ministry of Research, Technology and Space (BMFTR). It runs from March 2027 to February 2029 and builds an automated pipeline that grounds synthetic data generation in domain documents and validates the output before it is used for training or evaluation.
+
+## Research areas
+
+- Synthetic data: generating training and evaluation data that respects domain constraints.
+- Retrieval: finding and ranking the right documents so that models answer from evidence.
+- Evaluation: benchmarks and studies that test whether models hold up on real-world text.
+
+## Publications
+
+- [sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook](https://doi.org/10.48550/ARXIV.2603.13962): Ibrahim Ebrar Yurt, Fabian Karl, Tejaswi Choppa, Florian Matthes. arXiv preprint, 2026.
+- [CRAWLDoc: A System for Contextual Ranking and Bibliographic Metadata Extraction from Web Resources](https://doi.org/10.54195/IRRJ.23861): Fabian Karl, Ansgar Scherp. Inf. Retr. Res. J., 2026.
+- [HYDRA: A Multi-Head Encoder-only Architecture for Hierarchical Text Classification](https://doi.org/10.18653/V1/2025.EMNLP-MAIN.472): Fabian Karl, Ansgar Scherp. EMNLP, 2025.
+- [Efficient Continual Learning for Small Language Models with a Discrete Key-Value Bottleneck](https://aclanthology.org/2025.icnlsp-1.17/): Andor Diera, Lukas Galke, Fabian Karl, Ansgar Scherp. ICNLSP, 2025.
+- [CRAWLDoc: A Dataset for Robust Ranking of Bibliographic Documents](https://ceur-ws.org/Vol-4022/paper-04.pdf): Fabian Karl, Ansgar Scherp. SCOLIA, 2025.
+- [Continual Learning for Encoder-only Language Models via a Discrete Key-Value Bottleneck](https://doi.org/10.48550/ARXIV.2412.08528): Andor Diera, Lukas Galke, Fabian Karl, Ansgar Scherp. arXiv preprint, 2024.
+- [Transformers are Short-Text Classifiers](https://doi.org/10.1007/978-3-031-40837-3_7): Fabian Karl, Ansgar Scherp. CD-MAKE, 2023.
+- [GenCodeSearchNet: A Benchmark Test Suite for Evaluating Generalization in Programming Language Understanding](https://doi.org/10.48550/ARXIV.2311.09707): Andor Diera, Abdelhalim Hafedh Dahou, Lukas Galke, Fabian Karl, Florian Sihler, Ansgar Scherp. arXiv preprint, 2023.
+- [Transformers are Short Text Classifiers: A Study of Inductive Short Text Classifiers on Benchmarks and Real-world Datasets](https://doi.org/10.48550/ARXIV.2211.16878): Fabian Karl, Ansgar Scherp. arXiv preprint, 2022.
+
+The authoritative list is on [DBLP](https://dblp.uni-trier.de/pid/239/6427-1.html) and [Google Scholar](https://scholar.google.com/citations?user=Pv9PEEQAAAAJ).
+
+## Background
+
+- 2025 to present: PhD researcher, Technical University of Munich, sebis chair.
+- 2024: PhD researcher in NLP, Ulm University.
+- 2024: M.Sc. Computer Science, Ulm University.
+- 2022: B.Sc. Computer Science, Ulm University.
+
+## Side projects
+
+- [German Party Manifestos](https://www.tadl.fkarl.de/): topic modeling of party manifestos with LDA, HDP and BERT.
+- [Efficient Inferencing](https://github.com/FKarl/Efficient-Inferencing): distillation, pruning and quantization of small language models.
+- [Graph-MLP Sampling](https://github.com/FKarl/Graph-MLP-Sampling): thirteen sampling strategies compared across six benchmarks.
+
+## Contact and profiles
+
+- Email: fabian.karl@tum.de
+- [CV (PDF)](https://www.fkarl.de/resources/CV_Fabian_Karl.pdf)
+- [Google Scholar](https://scholar.google.com/citations?user=Pv9PEEQAAAAJ)
+- [DBLP](https://dblp.uni-trier.de/pid/239/6427-1.html)
+- [ORCID](https://orcid.org/0009-0008-0079-5604)
+- [GitHub](https://github.com/FKarl)
+- [LinkedIn](https://www.linkedin.com/in/FKarl)

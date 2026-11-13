@@ -40,7 +40,6 @@ export interface I18nContent {
     subtitleA: string
     subtitleB: string
     sourceFallback: string
-    loading: string
     empty: string
     filters: Record<string, string>
     types: Record<string, string>
@@ -88,8 +87,7 @@ const en: I18nContent = {
     title: "Publications",
     subtitleA: "Always current. Synced live from",
     subtitleB: ".",
-    sourceFallback: "DBLP is unreachable right now. Showing a saved selection; the full list is on",
-    loading: "Loading publications from DBLP…",
+    sourceFallback: "Live sync is unavailable right now. Showing the list from the last site update; the newest entries are on",
     empty: "No publications match this filter.",
     filters: { all: "All", conference: "Conference", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Thesis" },
     types: { conference: "Conference", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Thesis", article: "Article" },
@@ -129,7 +127,7 @@ const de: I18nContent = {
     kicker: "Doktorand, Technische Universität München",
     h1: "Ich mache Sprachmodelle nutzbar für Fachgebiete, in denen Daten knapp sind.",
     lead: "Synthetische Daten, Retrieval und Evaluation für Medizin, Steuern und andere Bereiche, in denen echte Beispiele vertraulich oder teuer sind.",
-    cta: "Kontakt aufnehmen",
+    cta: "Kontakt",
     cv: "Lebenslauf",
     photoAlt: "Porträt von Fabian Karl",
   },
@@ -156,8 +154,7 @@ const de: I18nContent = {
     title: "Publikationen",
     subtitleA: "Immer aktuell. Live synchronisiert mit",
     subtitleB: ".",
-    sourceFallback: "DBLP ist gerade nicht erreichbar. Angezeigt wird eine gespeicherte Auswahl; die vollständige Liste steht auf",
-    loading: "Publikationen werden von DBLP geladen…",
+    sourceFallback: "Die Live-Synchronisierung ist gerade nicht verfügbar. Angezeigt wird der Stand der letzten Aktualisierung; die neuesten Einträge stehen auf",
     empty: "Keine Publikationen für diesen Filter.",
     filters: { all: "Alle", conference: "Konferenz", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Abschlussarbeit" },
     types: { conference: "Konferenz", journal: "Journal", workshop: "Workshop", preprint: "Preprint", thesis: "Abschlussarbeit", article: "Artikel" },

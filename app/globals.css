@@ -94,6 +94,7 @@
 .hero h1 { margin: 0; font-size: clamp(36px, 4.6vw, 60px); font-weight: 600; line-height: 1.06; letter-spacing: -0.035em; }
 .hero-lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; color: var(--ink-2); max-width: 520px; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; }
+.hero-profiles { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .hero-links .ulink { color: var(--ink); }
 .hero-links .ulink:hover { color: var(--accent); }
 .btn { background: var(--ink); color: var(--bg); font-weight: 600; padding: 14px 26px; border-radius: var(--r-sm); display: inline-block; }
@@ -108,11 +109,16 @@
 
 /* ---- Research ---- */
 .research { display: flex; flex-direction: column; gap: 64px; }
-.aidapt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px 80px; }
+.aidapt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px 80px; }
+.aidapt-head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 16px; max-width: 880px; }
 .aidapt-text { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+.aidapt-icon { display: inline-block; height: 0.95em; width: auto; margin-right: 0.28em; vertical-align: -0.1em; }
+.only-dark { display: none; }
+:root[data-theme="dark"] .only-light { display: none; }
+:root[data-theme="dark"] .only-dark { display: inline-block; }
 .kicker { margin: 0; font-weight: 600; color: var(--accent); }
 .lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; }
-.facts { margin: 0; align-self: end; }
+.facts { margin: 0; align-self: start; }
 .fact { display: flex; justify-content: space-between; gap: 24px; padding-block: 16px; border-top: 1px solid var(--rule); }
 .fact:last-child { border-bottom: 1px solid var(--rule); }
 .fact dt { color: var(--ink-3); }
@@ -152,7 +158,6 @@
 .pub-links a { padding-block: 10px; }
 .badge { flex: 0 0 auto; font-size: 14px; font-weight: 600; color: var(--ink-2); background: var(--neutral-soft); padding: 6px 12px; border-radius: 6px; }
 .badge.accent { color: var(--accent); background: var(--accent-soft); }
-.skeleton { height: 96px; border-radius: var(--r); background: var(--tint); }
 @media (max-width: 720px) {
   .year-group { grid-template-columns: minmax(0, 1fr); padding-block: 24px; }
   .year { font-size: 32px; }
@@ -199,3 +204,7 @@
 .footer-nav a { color: #e4e8e5; padding-block: 10px; }
 .footer-nav a:hover { color: var(--footer-accent); }
 .footer-note { color: #b4bbb7; }
+
+@media (max-width: 480px) {
+  .hero-profiles { gap: 0 14px; font-size: 16px; }
+}

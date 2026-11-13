@@ -1,10 +1,6 @@
-# Allow all crawlers
+# All crawlers are welcome, including search engines and AI assistants.
 User-agent: *
 Allow: /
 
-# Prevent crawling of specific paths
-Disallow: /api/
-Disallow: /assets/private/
-
-# Sitemap location
+# A plain-text summary of this site for language models: https://www.fkarl.de/llms.txt
 Sitemap: https://www.fkarl.de/sitemap.xml

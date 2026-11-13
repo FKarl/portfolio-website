@@ -14,10 +14,12 @@ export function Hero() {
         <p className="hero-lead">{t.hero.lead}</p>
         <div className="hero-links">
           <a className="btn" href={`mailto:${LINKS.email}`}>{t.hero.cta}</a>
-          <a className="ulink" href={LINKS.cv}>{t.hero.cv}</a>
-          <a className="ulink" href={LINKS.scholar} target="_blank" rel="noopener">Scholar</a>
-          <a className="ulink" href={LINKS.github} target="_blank" rel="noopener">GitHub</a>
-          <a className="ulink" href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+          <span className="hero-profiles">
+            <a className="ulink" href={LINKS.cv}>{t.hero.cv}</a>
+            <a className="ulink" href={LINKS.scholar} target="_blank" rel="noopener">Scholar</a>
+            <a className="ulink" href={LINKS.github} target="_blank" rel="noopener">GitHub</a>
+            <a className="ulink" href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+          </span>
         </div>
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
