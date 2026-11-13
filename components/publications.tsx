@@ -186,7 +186,7 @@ export function Publications() {
             </span>
             <button
               type="button"
-              className="btn more-btn"
+              className="btn-outline more-btn"
               aria-expanded={expanded}
               onClick={() => {
                 if (expanded) document.getElementById("publications")?.scrollIntoView({ block: "start" })
