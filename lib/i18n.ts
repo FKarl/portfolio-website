@@ -129,7 +129,7 @@ const de: I18nContent = {
     kicker: "Doktorand, Technische Universität München",
     h1: "Ich mache Sprachmodelle nutzbar für Fachgebiete, in denen Daten knapp sind.",
     lead: "Synthetische Daten, Retrieval und Evaluation für Medizin, Steuern und andere Bereiche, in denen echte Beispiele vertraulich oder teuer sind.",
-    cta: "Kontakt aufnehmen",
+    cta: "Kontakt",
     cv: "Lebenslauf",
     photoAlt: "Porträt von Fabian Karl",
   },

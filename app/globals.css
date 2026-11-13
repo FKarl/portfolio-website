@@ -94,6 +94,7 @@
 .hero h1 { margin: 0; font-size: clamp(36px, 4.6vw, 60px); font-weight: 600; line-height: 1.06; letter-spacing: -0.035em; }
 .hero-lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; color: var(--ink-2); max-width: 520px; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; }
+.hero-profiles { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .hero-links .ulink { color: var(--ink); }
 .hero-links .ulink:hover { color: var(--accent); }
 .btn { background: var(--ink); color: var(--bg); font-weight: 600; padding: 14px 26px; border-radius: var(--r-sm); display: inline-block; }
@@ -199,3 +200,7 @@
 .footer-nav a { color: #e4e8e5; padding-block: 10px; }
 .footer-nav a:hover { color: var(--footer-accent); }
 .footer-note { color: #b4bbb7; }
+
+@media (max-width: 480px) {
+  .hero-profiles { gap: 0 14px; font-size: 16px; }
+}
