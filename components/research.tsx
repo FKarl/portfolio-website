@@ -11,7 +11,7 @@ export function Research() {
     <section id="research" className="tint">
       <div className="wrap section research">
         <div className="aidapt">
-          <div className="aidapt-text">
+          <div className="aidapt-head">
             <p className="kicker">{r.kicker}</p>
             <h2 className="h2">
               {/* eslint-disable @next/next/no-img-element */}
@@ -20,6 +20,8 @@ export function Research() {
               {/* eslint-enable @next/next/no-img-element */}
               {r.title}
             </h2>
+          </div>
+          <div className="aidapt-text">
             <p className="lead">{r.lead}</p>
             <p className="muted" style={{ margin: 0 }}>{r.body}</p>
             <a className="ulink" href={LINKS.aidapt} target="_blank" rel="noopener">{r.link}</a>
