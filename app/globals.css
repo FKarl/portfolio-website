@@ -111,7 +111,8 @@
 .research { display: flex; flex-direction: column; gap: 64px; }
 .aidapt { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px 80px; }
 .aidapt-text { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-.aidapt-icon { width: 58px; height: auto; display: block; margin-bottom: 4px; }
+.kicker-row { display: flex; align-items: center; gap: 12px; }
+.aidapt-icon { flex: 0 0 auto; width: 34px; height: auto; display: block; }
 .only-dark { display: none; }
 :root[data-theme="dark"] .only-light { display: none; }
 :root[data-theme="dark"] .only-dark { display: block; }
