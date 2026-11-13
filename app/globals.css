@@ -88,10 +88,10 @@
 }
 
 /* ---- Hero ---- */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 48px 80px; align-items: end; padding-block: clamp(32px, 5vw, 56px) clamp(64px, 8vw, 96px); }
-.hero-text { display: flex; flex-direction: column; gap: 32px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, clamp(280px, 32vw, 400px)); gap: 48px clamp(32px, 6vw, 80px); align-items: center; padding-block: clamp(32px, 5vw, 56px) clamp(64px, 8vw, 96px); }
+.hero-text { display: flex; flex-direction: column; gap: clamp(20px, 2.6vw, 32px); }
 .hero-kicker { margin: 0; color: var(--ink-3); }
-.hero h1 { margin: 0; font-size: clamp(38px, 5.4vw, 60px); font-weight: 600; line-height: 1.06; letter-spacing: -0.035em; }
+.hero h1 { margin: 0; font-size: clamp(36px, 4.6vw, 60px); font-weight: 600; line-height: 1.06; letter-spacing: -0.035em; }
 .hero-lead { margin: 0; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; color: var(--ink-2); max-width: 520px; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; }
 .hero-links .ulink { color: var(--ink); }
