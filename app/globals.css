@@ -101,7 +101,7 @@
 .btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
 .btn-outline { appearance: none; background: transparent; border: 1px solid var(--ink); color: var(--ink); font: inherit; font-weight: 600; padding: 13px 26px; border-radius: var(--r-sm); cursor: pointer; }
 .btn-outline:hover { background: var(--ink); color: var(--bg); }
-.hero-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--r); display: block; }
+.hero-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; border-radius: var(--r); display: block; }
 @media (max-width: 860px) {
   .hero { grid-template-columns: minmax(0, 1fr); align-items: start; }
   .hero-photo { max-width: 360px; }
