@@ -23,7 +23,7 @@ export function Hero() {
         </div>
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="hero-photo" src="/assets/hero/portrait.jpg" alt={t.hero.photoAlt} width={1333} height={2000} />
+      <img className="hero-photo" src="/assets/hero/portrait.jpg" alt={t.hero.photoAlt} width={1100} height={1375} />
     </section>
   )
 }
